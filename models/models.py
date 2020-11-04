@@ -17,4 +17,3 @@
 #         for record in self:
 #             record.value2 = float(record.value) / 100
 #
-# PRUEBA DE GIT
