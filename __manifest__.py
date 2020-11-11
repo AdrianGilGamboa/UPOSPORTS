@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "UPOSPORTS",
+    'name': "uposports",
 
     'summary': """
         Complejo Deportivo UpoSports""",
 
     'description': """
-        Long description of module's purpose
+        Descripcion del modulo UPOSPORTS
     """,
 
-    'author': "My Company",
+    'author': "TSI - UPO",
     'website': "http://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
@@ -32,7 +32,7 @@
         'views/material_view.xml',
         'views/pago_view.xml',
         'views/reserva_view.xml',
-        'views/menu.xml'  
+        'views/menu.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
