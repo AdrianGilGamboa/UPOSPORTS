@@ -42,7 +42,7 @@ Por favor verifique que ha marcado la pestaña 'Load demostration data'.
 Este proyecto ha sido construido con:
 
 * [Odoo](https://www.odoo.com/es_ES/) - ERP ODOO
-* [Eclipse](https://www.eclipse.org/) - IDE Eclipse
+* [Visual Studio Code](https://code.visualstudio.com/) - Visual Studio Code
 * [Git Kraken](https://www.gitkraken.com/) - Controlador de versiones: Git Kraken
 
 ## Contribuyendo 🖇️
