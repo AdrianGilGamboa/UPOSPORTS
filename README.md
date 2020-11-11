@@ -13,7 +13,7 @@
 Lo primero que debe hacer es clonar este repositorio mediante el comando:
 
 ```sh
-git clone https://github.com/AdrianGilGamboa/UPOSPORTS.git
+git clone https://github.com/AdrianGilGamboa/uposports.git
 ```
 
 Mira **Despliegue** para conocer como desplegar el proyecto.
