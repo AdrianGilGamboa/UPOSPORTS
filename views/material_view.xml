@@ -1,6 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?>
 <odoo>
+  <record id="uposports_material_form_view" model="ir.ui.view">
+    <field name="name">uposports.material.form</field>
+    <field name="model">uposports.material</field>
+    <field name="arch" type="xml">
+      <form string="Material">
+        <sheet layout="auto">
+          <h2>Introduzca los datos del material a crear:</h2>
+          <group>
+            <field name="nombre" />
+            <field name="descripcion" />
+            <field name="unidades" />
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
 
-    
+  <record id="uposports_material_tree_view" model="ir.ui.view">
+    <field name="name">uposports.material.tree</field>
+    <field name="model">uposports.material</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+        <field name="nombre" />
+        <field name="descripcion" />
+        <field name="unidades" />
+      </tree>
+    </field>
+  </record>
 
+  <record id="material_list_action" model="ir.actions.act_window">
+    <field name="name">Material</field>
+    <field name="res_model">uposports.material</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">Crea el primer material</p>
+    </field>
+  </record>
 </odoo>
