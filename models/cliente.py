@@ -12,3 +12,6 @@ class Cliente(models.Model):
      apellidos = fields.Char(string="Apellidos",required=True, help="Apellidos del cliente")
      telefono = fields.Integer(("Telefono"), required=True)
      codigoPostal = fields.Char(string="Codigo Postal",required=True, help="Codigo Postal")
+
+     abono_id=fields.Many2one('uposports.abono',string="Abono")
+     reserva_id=fields.Many2one('uposports.reserva',string="Reserva")

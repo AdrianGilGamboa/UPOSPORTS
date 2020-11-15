@@ -11,3 +11,6 @@ class Reserva(models.Model):
      freserva = fields.Datetime('Fecha de reserva', required=True, autodate = True)
      horaInicio= fields.Datetime('Hora de inicio', required=True, autodate = True)
      horaFin = fields.Datetime('Hora de fin', required=True, autodate = True)
+
+     instalacion_id = fields.Many2one("uposports.instalacion",string="Instalacion")
+     cliente_id = fields.One2many("uposports.cliente","reserva_id","Cliente")

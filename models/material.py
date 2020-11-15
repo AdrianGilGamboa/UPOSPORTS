@@ -10,3 +10,5 @@ class Material(models.Model):
      nombre = fields.Char(string="Nombre Material", required=True, help="Nombre del material")
      descripcion = fields.Text()
      unidades = fields.Integer()
+
+     instalacion_id = fields.Many2one("uposports.instalacion",string="Instalacion")

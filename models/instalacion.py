@@ -10,3 +10,6 @@ class Instalacion(models.Model):
      nombre = fields.Char(string="Nombre", required=True, help="Nombre de la instalación")
      capacidad = fields.Integer("Capacidad máxima", required=True)
      descripcion = fields.Text()
+
+     material_id = fields.One2many("uposports.material","instalacion_id","Material")
+     reserva_id = fields.One2many("uposports.reserva","instalacion_id","Reserva")
