@@ -12,3 +12,5 @@ class Empleado(models.Model):
      apellidos = fields.Char(string="Apellidos", required=True, help="Apellidos del empleado")
      telefono = fields.Integer("Telefono", required=True)
 
+     abono_id = fields.One2many("uposports.abono","empleado_id","Abono")
+

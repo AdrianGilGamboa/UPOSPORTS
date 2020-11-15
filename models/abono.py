@@ -12,4 +12,6 @@ class Abono(models.Model):
      duracion = fields.Char(string="Duracion", required=True, help="tiempo que dura el abono")
     
 
+     empleado_id = fields.Many2one("uposports.empleado",string="Empleado")
+     cliente_id =  fields.One2many("uposports.cliente","abono_id","Cliente")
     
