@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <!-- Top menu item -->
   <menuitem name="UpoSports" id="main_uposports_menu" groups="group_uposports_manager"/>
@@ -7,6 +6,12 @@
   <menuitem name="UpoSports" id="uposports_menu" groups="group_uposports_manager" parent="main_uposports_menu"/>
 
   <!-- actions -->
+
   <menuitem name="Abono" id="abono_menu" parent="uposports_menu" groups="group_uposports_manager" action="abono_list_action"/>
   <menuitem name="Cliente" id="cliente_menu" parent="uposports_menu" groups="group_uposports_manager" action="cliente_list_action"/>
+
+
+  <menuitem name="Material" id="material_menu" parent="uposports_menu" groups="group_uposports_manager" action="material_list_action"/>
+  <menuitem name="Pago" id="pago_menu" parent="uposports_menu" groups="group_uposports_manager" action="pago_list_action"/>
 </odoo>
+
