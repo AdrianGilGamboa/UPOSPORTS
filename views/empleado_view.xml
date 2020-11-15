@@ -1,6 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <record id="uposports_empleado_form_view" model="ir.ui.view">
+        <field name="name">uposports.empleado.form</field>
+        <field name="model">uposports.empleado</field>
+        <field name="arch" type="xml">
+            <form string="Empleado">
+                <sheet layout="auto">
+                    <h2>Introduzca los datos del empleado a crear:</h2>
+                    <group>
+                        <group>
+                            <field name="dni"/>
+                        </group>
+                        <group>
+                            <field name="nombre" />
+                            <field name="apellidos" />
+                            <field name="telefono" />
+                        </group>
+                    </group>
+                    <p>
+                        <i>Nota: Los campos sombreados en color son obligatorios</i>
+                    </p>
+                    </sheet>
+                </form>
+            </field>
+        </record>
 
-    
+        <record id="uposports_empleado_tree_view" model="ir.ui.view">
+            <field name="name">uposports.empleado.tree</field>
+            <field name="model">uposports.empleado</field>
+            <field name="arch" type="xml">
+                <tree string="tree_string">
+                    <field name="dni" />
+                    <field name="nombre" />
+                    <field name="apellidos" />
+                    <field name="telefono" />
+                   <!--<field name="classes_ids" widget="many2many" />--> 
+                </tree>
+            </field>
+        </record>
 
-</odoo>
+        <record id="empleado_list_action" model="ir.actions.act_window">
+            <field name="name">Empleado</field>
+            <field name="res_model">uposports.empleado</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Crea el primer empleado</p>
+            </field>
+        </record>
+    </odoo>
