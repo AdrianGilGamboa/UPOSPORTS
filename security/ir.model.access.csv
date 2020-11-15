@@ -2,3 +2,7 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 abono_manager,abono_manager,model_uposports_abono,group_uposports_manager,1,1,1,1
 cliente_manager,cliente_manager,model_uposports_cliente,group_uposports_manager,1,1,1,1
 empleado_manager,empleado_manager,model_uposports_empleado,group_uposports_manager,1,1,1,1
+instalacion_manager,instalacion_manager,model_uposports_instalacion,group_uposports_manager,1,1,1,1
+material_manager,material_manager,model_uposports_material,group_uposports_manager,1,1,1,1
+pago_manager,pago_manager,model_uposports_pago,group_uposports_manager,1,1,1,1
+reserva_manager,reserva_manager,model_uposports_reserva,group_uposports_manager,1,1,1,1
