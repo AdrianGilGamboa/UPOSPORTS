@@ -25,14 +25,14 @@
     'data': [
         'security/security.xml',
         'security/ir.model.access.csv',
+        'views/complejodeportivo_view.xml',
         'views/abono_view.xml',
+         'views/reserva_view.xml',
         'views/cliente_view.xml',
         'views/empleado_view.xml',
         'views/instalacion_view.xml',
         'views/material_view.xml',
         'views/pago_view.xml',
-        'views/reserva_view.xml',
-        'views/complejoDeportivo_view.xml',
         'views/menu.xml',
     ],
     # only loaded in demonstration mode
