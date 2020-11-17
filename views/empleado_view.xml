@@ -19,31 +19,32 @@
                     <p>
                         <i>Nota: Los campos sombreados en color son obligatorios</i>
                     </p>
-                    </sheet>
-                </form>
-            </field>
-        </record>
+                </sheet>
+            </form>
+        </field>
+    </record>
 
-        <record id="uposports_empleado_tree_view" model="ir.ui.view">
-            <field name="name">uposports.empleado.tree</field>
-            <field name="model">uposports.empleado</field>
-            <field name="arch" type="xml">
-                <tree string="tree_string">
-                    <field name="dni" />
-                    <field name="nombre" />
-                    <field name="apellidos" />
-                    <field name="telefono" />
-                   <!--<field name="classes_ids" widget="many2many" />--> 
-                </tree>
-            </field>
-        </record>
+    <record id="uposports_empleado_tree_view" model="ir.ui.view">
+        <field name="name">uposports.empleado.tree</field>
+        <field name="model">uposports.empleado</field>
+        <field name="arch" type="xml">
+            <tree string="tree_string">
+                <field name="telefono" />
+                <field name="dni" />
+                <field name="nombre" />
+                <field name="apellidos" />
 
-        <record id="empleado_list_action" model="ir.actions.act_window">
-            <field name="name">Empleado</field>
-            <field name="res_model">uposports.empleado</field>
-            <field name="view_mode">tree,form</field>
-            <field name="help" type="html">
-                <p class="o_view_nocontent_smiling_face">Crea el primer empleado</p>
-            </field>
-        </record>
-    </odoo>
+                <field name="abono_id" widget="one2many" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="empleado_list_action" model="ir.actions.act_window">
+        <field name="name">Empleado</field>
+        <field name="res_model">uposports.empleado</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Crea el primer empleado</p>
+        </field>
+    </record>
+</odoo>

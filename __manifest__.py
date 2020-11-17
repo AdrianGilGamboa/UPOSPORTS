@@ -32,6 +32,7 @@
         'views/material_view.xml',
         'views/pago_view.xml',
         'views/reserva_view.xml',
+        'views/complejoDeportivo_view.xml',
         'views/menu.xml',
     ],
     # only loaded in demonstration mode

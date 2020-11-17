@@ -1,52 +1,51 @@
-
 <odoo>
-   <record id="uposports_abono_form_view" model="ir.ui.view">
+    <record id="uposports_abono_form_view" model="ir.ui.view">
         <field name="name">uposports.abono.form</field>
         <field name="model">uposports.abono</field>
         <field name="arch" type="xml">
             <form string="Abono">
-            <sheet layout="auto">
+                <sheet layout="auto">
                     <h2>Introduzca los datos del abono a crear:</h2>
                     <group>
                         <group>
                             <field name="tipo"/>
+                            <field name="duracion" />
+                            <field name="precio" />
                         </group>
                         <group>
-                         <field name="duracion" />
-                            <field name="precio" />
+                           <field name="empleado_id" widget="many2one"/>
                         </group>
                     </group>
                     <p>
                         <i>Nota: Los campos sombreados en color son obligatorios</i>
                     </p>
-                    </sheet>
-                </form>
-            </field>
-        </record>
+                </sheet>
+            </form>
+        </field>
+    </record>
 
-<record id="uposports_abono_tree_view" model="ir.ui.view">
-            <field name="name">uposports.abono.tree</field>
-            <field name="model">uposports.abono</field>
-            <field name="arch" type="xml">
-                <tree string="tree_string">
-                 <field name="tipo" />
-                    <field name="precio" />
-                    <field name="duracion" />
-                    
-                   <!--<field name="classes_ids" widget="many2many" />--> 
-                </tree>
-            </field>
-        </record>
+    <record id="uposports_abono_tree_view" model="ir.ui.view">
+        <field name="name">uposports.abono.tree</field>
+        <field name="model">uposports.abono</field>
+        <field name="arch" type="xml">
+            <tree string="tree_string">
+                <field name="tipo" />
+                <field name="precio" />
+                <field name="duracion" />
+                <field name="empleado_id" widget="many2one"/>
+            </tree>
+        </field>
+    </record>
 
 
-  
 
-   <record id="abono_list_action" model="ir.actions.act_window">
-            <field name="name">Abono</field>
-            <field name="res_model">uposports.abono</field>
-            <field name="view_mode">tree,form</field>
-            <field name="help" type="html">
-                <p class="o_view_nocontent_smiling_face">Crea el primer abono</p>
-            </field>
-        </record>
-    </odoo>
+
+    <record id="abono_list_action" model="ir.actions.act_window">
+        <field name="name">Abono</field>
+        <field name="res_model">uposports.abono</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Crea el primer abono</p>
+        </field>
+    </record>
+</odoo>

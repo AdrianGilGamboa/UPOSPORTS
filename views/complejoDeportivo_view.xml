@@ -1,0 +1,37 @@
+<odoo>
+    <record id="uposports_complejoDeportivo_form_view" model="ir.ui.view">
+        <field name="name">uposports.complejoDeportivo.form</field>
+        <field name="model">uposports.complejoDeportivo</field>
+        <field name="arch" type="xml">
+            <form string="Complejo Deportivo">
+                <sheet layout="auto">
+                    <field name="abono_id" widget="one2many"/>
+                    <field name="reserva_id" widget="one2many"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="uposports_complejoDeportivo_tree_view" model="ir.ui.view">
+        <field name="name">uposports.complejoDeportivo.tree</field>
+        <field name="model">uposports.complejoDeportivo</field>
+        <field name="arch" type="xml">
+            <tree string="tree_string">
+                <field name="abono_id" widget="one2many"/>
+                <field name="reserva_id" widget="one2many"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="complejoDeportivo_list_action" model="ir.actions.act_window">
+        <field name="name">Complejo Deportivo</field>
+        <field name="res_model">uposports.complejoDeportivo</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No hay datos</p>
+        </field>
+    </record>
+
+
+</odoo>
