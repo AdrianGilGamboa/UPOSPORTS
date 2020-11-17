@@ -14,5 +14,5 @@ class Reserva(models.Model):
 
      instalacion_id = fields.Many2one("uposports.instalacion",string="Instalacion")
      cliente_id = fields.One2many("uposports.cliente","reserva_id","Cliente")
-     complejoDeportivo_id = fields.Many2one("uposports.complejoDeportivo",string="Hola")
+     complejoDeportivo_id = fields.Many2one("uposports.complejodeportivo",string="Hola")
 

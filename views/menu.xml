@@ -6,10 +6,10 @@
   <menuitem name="UpoSports" id="uposports_menu" groups="group_uposports_manager" parent="main_uposports_menu"/>
 
   <!-- actions -->
-    <menuitem name="Complejo Deportivo" id="complejoDeportivo_menu" parent="uposports_menu" groups="group_uposports_manager" action="complejoDeportivo_list_action"/>
-  <menuitem name="Insertar Abono" id="abono_menu" parent="uposports_menu" groups="group_uposports_manager" action="abono_list_action"/>
-  <menuitem name="Insertar Reserva" id="reserva_menu" parent="uposports_menu" groups="group_uposports_manager" action="reserva_list_action"/>
-  <menuitem name="Insertar Cliente" id="cliente_menu" parent="uposports_menu" groups="group_uposports_manager" action="cliente_list_action"/>
+  <menuitem name="Complejo Deportivo" id="complejodeportivo_menu" parent="uposports_menu" groups="group_uposports_manager" action="complejodeportivo_list_action"/>
+  <menuitem name="Nuevo Abono" id="abono_menu" parent="uposports_menu" groups="group_uposports_manager" action="abono_list_action"/>
+  <menuitem name="Nueva Reserva" id="reserva_menu" parent="uposports_menu" groups="group_uposports_manager" action="reserva_list_action"/>
+  <menuitem name="Nuevo Cliente" id="cliente_menu" parent="uposports_menu" groups="group_uposports_manager" action="cliente_list_action"/>
   <menuitem name="Insertar Material / Ver Materiales" id="material_menu" parent="uposports_menu" groups="group_uposports_manager" action="material_list_action"/>
   <menuitem name="Insertar Empleado / Ver Empleados" id="empleado_menu" parent="uposports_menu" groups="group_uposports_manager" action="empleado_list_action"/>
   <menuitem name="Insertar Instalacion / Ver Instalaciones" id="instalacion_menu" parent="uposports_menu" groups="group_uposports_manager" action="instalacion_list_action"/>

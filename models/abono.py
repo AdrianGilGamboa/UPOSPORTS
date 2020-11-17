@@ -14,5 +14,5 @@ class Abono(models.Model):
 
      empleado_id = fields.Many2one("uposports.empleado",string="Creado por el empleado")
      cliente_id =  fields.One2many("uposports.cliente","abono_id","Cliente")
-     complejoDeportivo_id = fields.Many2one("uposports.complejoDeportivo",string="Hola")
+     complejoDeportivo_id = fields.Many2one("uposports.complejodeportivo",string="Hola")
     
