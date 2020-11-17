@@ -5,42 +5,49 @@
         <field name="arch" type="xml">
             <form string="Instalacion">
                 <sheet layout="auto">
-                    <h2>Introduzca los datos de la instalacion a crear:</h2>
-                    <group>
-                        <group>
-                            <field name="nombre" />
-                            <field name="capacidad" />
-                            <field name="descripcion" />
-                       <!--<field name="classes_ids" widget="many2many" />--> 
-                        </group>
-                    </group>
-                    <p>
-                        <i>Nota: Los campos sombreados en color son obligatorios</i>
-                    </p>
-                    </sheet>
-                </form>
-            </field>
-        </record>
+                    <notebook>
+                        <page name="datosInstalacion" string="Datos de la Instalación">
+                            <h2>Introduzca los datos de la instalacion a crear:</h2>
+                            <group>
 
-        <record id="uposports_instalacion_tree_view" model="ir.ui.view">
-            <field name="name">uposports.instalacion.tree</field>
-            <field name="model">uposports.instalacion</field>
-            <field name="arch" type="xml">
-                <tree string="tree_string">
-                        <field name="nombre" />
-                        <field name="capacidad" />                        
-                        <field name="descripcion" />
-                   <!--<field name="classes_ids" widget="many2many" />--> 
-                </tree>
-            </field>
-        </record>
+                                <field name="nombre" />
+                                <field name="capacidad" />
+                                <field name="descripcion" />
 
-        <record id="instalacion_list_action" model="ir.actions.act_window">
-            <field name="name">Instalacion</field>
-            <field name="res_model">uposports.instalacion</field>
-            <field name="view_mode">tree,form</field>
-            <field name="help" type="html">
-                <p class="o_view_nocontent_smiling_face">Crea la primera instalacion</p>
-            </field>
-        </record>
-    </odoo>
+                            </group>
+                            <p>
+                                <i>Nota: Los campos sombreados en color son obligatorios</i>
+                            </p>
+                        </page>
+                        <page name="materialInstalación" string="Materiales de la Instalación">
+                            <field name="material_id" widget="one2many" />
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="uposports_instalacion_tree_view" model="ir.ui.view">
+        <field name="name">uposports.instalacion.tree</field>
+        <field name="model">uposports.instalacion</field>
+        <field name="arch" type="xml">
+            <tree string="tree_string">
+                <field name="nombre" />
+                <field name="capacidad" />
+                <field name="descripcion" />
+                <field name="material_id" widget="one2many" />
+                <field name="reserva_id" widget="one2many" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="instalacion_list_action" model="ir.actions.act_window">
+        <field name="name">Instalacion</field>
+        <field name="res_model">uposports.instalacion</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Crea la primera instalacion</p>
+        </field>
+    </record>
+</odoo>
