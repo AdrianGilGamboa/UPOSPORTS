@@ -16,6 +16,9 @@
                              </field>
                             <field name="horaInicio" />
                             <field name="horaFin" />
+                            <field name="instalacion_id" widget="many2one"/>
+                            <field name="cliente_id" widget="many2one"/>
+                            <field name="complejoDeportivo_id" widget="many2one"/>
                         </group>
                     </group>
                     <p>
@@ -34,6 +37,9 @@
                 <field name="freserva" />
                 <field name="horaInicio" />
                 <field name="horaFin" />
+                <field name="instalacion_id" widget="many2one"/>
+                <field name="cliente_id" widget="many2one"/>
+                <field name="complejoDeportivo_id" widget="many2one"/>
                 <!--<field name="classes_ids" widget="many2many" />-->
             </tree>
         </field>
