@@ -5,13 +5,17 @@
     <field name="arch" type="xml">
       <form string="Material">
         <sheet layout="auto">
-          <h2>Introduzca los datos del material a crear:</h2>
+          <h2>Datos del material:</h2>
           <group>
-            <field name="nombre" />
+            <field name="name" />
             <field name="descripcion" />
             <field name="unidades" />
             <field name="instalacion_id" widget="many2one"/>
           </group>
+          <p>
+          <br/>
+          <i>Nota: Para añadir o editar, los campos sombreados en color son obligatorios</i>
+          </p>
         </sheet>
       </form>
     </field>
@@ -22,19 +26,35 @@
     <field name="model">uposports.material</field>
     <field name="arch" type="xml">
       <tree string="tree_string">
-        <field name="nombre" />
+        <field name="name" />
         <field name="descripcion" />
         <field name="unidades" />
-         <field name="instalacion_id" widget="many2one"/>
-
+        <field name="instalacion_id" widget="many2one"/>
       </tree>
     </field>
   </record>
+
+    <!-- Search view -->
+
+      <record id="material_view_search" model="ir.ui.view">
+        <field name="name">uposports.material.search</field>
+        <field name="model">uposports.material</field>
+        <field name="arch" type="xml">
+            <search string="Search">
+                <filter name="search_quantity" string="Unidades&lt;10" domain="[('unidades','&lt;','10')]" />
+                <group expand="0" string="Agrupar por...">
+                    <filter name="group_by_instalacion" string="Agrupar por instalaciones" context="{'group_by': 'instalacion_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
 
   <record id="material_list_action" model="ir.actions.act_window">
     <field name="name">Material</field>
     <field name="res_model">uposports.material</field>
     <field name="view_mode">tree,form</field>
+    <field name="search_view_id" ref="material_view_search"/>
+
     <field name="help" type="html">
       <p class="o_view_nocontent_smiling_face">Crea el primer material</p>
     </field>

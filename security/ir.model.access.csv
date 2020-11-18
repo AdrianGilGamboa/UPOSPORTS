@@ -6,4 +6,3 @@ instalacion_manager,instalacion_manager,model_uposports_instalacion,group_upospo
 material_manager,material_manager,model_uposports_material,group_uposports_manager,1,1,1,1
 pago_manager,pago_manager,model_uposports_pago,group_uposports_manager,1,1,1,1
 reserva_manager,reserva_manager,model_uposports_reserva,group_uposports_manager,1,1,1,1
-complejodeportivo_manager,complejodeportivo_manager,model_uposports_complejodeportivo,group_uposports_manager,1,1,1,1

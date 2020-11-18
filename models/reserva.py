@@ -1,18 +1,17 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
+import time
 
 
 class Reserva(models.Model):
      _name = 'uposports.reserva'
      _description = 'uposports Reserva'
+     _rec_name = 'instalacion_id'
 
-     id_reserva = fields.Integer("ID Reserva")
-     freserva = fields.Datetime('Fecha de reserva', required=True, autodate = True)
-     horaInicio= fields.Datetime('Hora de inicio', required=True, autodate = True)
-     horaFin = fields.Datetime('Hora de fin', required=True, autodate = True)
+     name = fields.Integer(string="ID Reserva")
+     fechaHoraInicio= fields.Datetime('Fecha/Hora Inicio', required=True, autodate = True, store=True)
+     fechaHoraFin = fields.Datetime('Fecha/Hora Fin', required=True, autodate = True, store=True)
 
-     instalacion_id = fields.Many2one("uposports.instalacion",string="Instalacion")
-     cliente_id = fields.One2many("uposports.cliente","reserva_id","Cliente")
-     complejoDeportivo_id = fields.Many2one("uposports.complejodeportivo",string="Hola")
-
+     instalacion_id = fields.Many2one("uposports.instalacion",string="Instalacion",required=True )
+     cliente_id = fields.Many2one("uposports.cliente",string="Cliente",required=True)  
