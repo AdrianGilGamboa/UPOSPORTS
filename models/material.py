@@ -7,8 +7,8 @@ class Material(models.Model):
      _name = 'uposports.material'
      _description = 'uposports Material'
 
-     nombre = fields.Char(string="Nombre Material", required=True, help="Nombre del material")
-     descripcion = fields.Text()
+     name = fields.Char(string="Nombre", required=True, size=30, help="Nombre del material")
+     descripcion = fields.Text(size=300)
      unidades = fields.Integer()
 
      instalacion_id = fields.Many2one("uposports.instalacion",string="Instalacion")

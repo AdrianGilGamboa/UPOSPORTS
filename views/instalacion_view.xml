@@ -7,20 +7,24 @@
                 <sheet layout="auto">
                     <notebook>
                         <page name="datosInstalacion" string="Datos de la Instalación">
-                            <h2>Introduzca los datos de la instalacion a crear:</h2>
+                            <h2>Datos de la instalacion:</h2>
                             <group>
 
-                                <field name="nombre" />
+                                <field name="name" />
                                 <field name="capacidad" />
                                 <field name="descripcion" />
 
                             </group>
                             <p>
-                                <i>Nota: Los campos sombreados en color son obligatorios</i>
+                                <br/>
+                                <i>Nota: Para añadir o editar, los campos sombreados en color son obligatorios</i>
                             </p>
                         </page>
                         <page name="materialInstalación" string="Materiales de la Instalación">
                             <field name="material_id" widget="one2many" />
+                        </page>
+                        <page name="reservaInstalación" string="Reservas de la Instalación">
+                            <field name="reserva_id" widget="one2many" />
                         </page>
                     </notebook>
                 </sheet>
@@ -33,12 +37,22 @@
         <field name="model">uposports.instalacion</field>
         <field name="arch" type="xml">
             <tree string="tree_string">
-                <field name="nombre" />
+                <field name="name" />
                 <field name="capacidad" />
                 <field name="descripcion" />
-                <field name="material_id" widget="one2many" />
-                <field name="reserva_id" widget="one2many" />
             </tree>
+        </field>
+    </record>
+
+    <!-- Search view -->
+
+    <record id="instalacion_view_search" model="ir.ui.view">
+        <field name="name">uposports.instalacion.search</field>
+        <field name="model">uposports.instalacion</field>
+        <field name="arch" type="xml">
+            <search>
+                <filter name="search_capacidad" string="Capacidad &lt; 10" domain="[('capacidad','&lt;',50)]" />
+            </search>
         </field>
     </record>
 
@@ -46,6 +60,8 @@
         <field name="name">Instalacion</field>
         <field name="res_model">uposports.instalacion</field>
         <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="instalacion_view_search"/>
+
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">Crea la primera instalacion</p>
         </field>

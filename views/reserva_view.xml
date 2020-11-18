@@ -5,50 +5,74 @@
         <field name="arch" type="xml">
             <form string="Reserva">
                 <sheet layout="auto">
-                    <h2>Introduzca los datos de la reserva a crear:</h2>
+                    <h2>Datos de la reserva:</h2>
                     <group>
-                        <group>
-                            <field name="id_reserva"/>
-                        </group>
-                        <group>
-                            <field name="freserva" position="attributes">
-                             <attribute name="t-options">{"format": "dd / MM / yyyy"}</attribute>
-                             </field>
-                            <field name="horaInicio" />
-                            <field name="horaFin" />
-                            <field name="instalacion_id" widget="many2one"/>
-                            <field name="cliente_id" widget="many2one"/>
-                            <field name="complejoDeportivo_id" widget="many2one"/>
-                        </group>
+                        <field name="fechaHoraInicio" />
+                        <field name="fechaHoraFin" />
+                        <field name="instalacion_id" widget="many2one"/>
+                        <field name="cliente_id" widget="many2one"/>
                     </group>
                     <p>
-                        <i>Nota: Los campos sombreados en color son obligatorios</i>
+                        <br/>
+                        <i>Nota: Para añadir o editar, los campos sombreados en color son obligatorios</i>
                     </p>
                 </sheet>
             </form>
         </field>
     </record>
+
     <record id="uposports_reserva_tree_view" model="ir.ui.view">
         <field name="name">uposports.reserva.tree</field>
         <field name="model">uposports.reserva</field>
         <field name="arch" type="xml">
             <tree string="tree_string">
-                <field name="id_reserva" />
-                <field name="freserva" />
-                <field name="horaInicio" />
-                <field name="horaFin" />
+                <field name="fechaHoraInicio" />
+                <field name="fechaHoraFin" />
                 <field name="instalacion_id" widget="many2one"/>
                 <field name="cliente_id" widget="many2one"/>
-                <field name="complejoDeportivo_id" widget="many2one"/>
-                <!--<field name="classes_ids" widget="many2many" />-->
             </tree>
         </field>
     </record>
 
+    <!-- Vista Calendario-->
+
+    <record model="ir.ui.view" id="reserva_calendar_view">
+        <field name="name">Calendario de Reservas</field>
+        <field name="model">uposports.reserva</field>
+        <field name="type">calendar</field>
+        <field name="arch" type="xml">
+            <calendar string="Vista Calendario" color="instalacion_id" date_start="fechaHoraInicio" date_stop="fechaHoraFin" mode="week">
+                <field name="cliente_id"/>
+                <field name="instalacion_id"/>
+
+            </calendar>
+        </field>
+    </record>
+
+    <!-- Search view -->
+
+    <record id="reserva_view_search" model="ir.ui.view">
+        <field name="name">uposports.reserva.search</field>
+        <field name="model">uposports.reserva</field>
+        <field name="arch" type="xml">
+            <search string="Search">
+                <filter name="today" string="Reservas para hoy" domain="[('fechaHoraInicio','&gt;=',context_today().strftime('%%Y-%%m-%%d 00:00:00')), ('fechaHoraInicio','&lt;=',context_today().strftime('%%Y-%%m-%%d 23:59:59')), ]" />
+                <filter name="tomorrow" string="Reservas para mañana"  domain="[('fechaHoraInicio','&gt;=', ((context_today()+datetime.timedelta(days=1)).strftime('%Y-%m-%d'))), ('fechaHoraInicio','&lt;=', ((context_today()+datetime.timedelta(days=1)).strftime('%Y-%m-%d')))]"/>
+                <group expand="0" string="Agrupar por...">
+                    <filter name="group_by_instalacion" string="Agrupar por instalaciones" context="{'group_by': 'instalacion_id'}" />
+                    <filter name="group_by_cliente" string="Agrupar por clientes" context="{'group_by': 'cliente_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+
     <record id="reserva_list_action" model="ir.actions.act_window">
         <field name="name">Reserva</field>
         <field name="res_model">uposports.reserva</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,calendar</field>
+        <field name="search_view_id" ref="reserva_view_search"/>
+
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">Crea la primera reserva</p>
         </field>
