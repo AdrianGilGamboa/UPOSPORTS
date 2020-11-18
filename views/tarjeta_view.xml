@@ -1,0 +1,34 @@
+<odoo>
+  <record id="uposports_tarjeta_form_view" model="ir.ui.view">
+    <field name="name">uposports.tarjeta.form</field>
+    <field name="model">uposports.pago</field>
+    <field name="inherit_id" ref="uposports.uposports_pago_form_view" />
+    <field name="type">form</field>
+    <field name="arch" type="xml">
+        <field name="cantidad" position="after">
+            <field name="entidadBancaria"/>
+        </field>
+    </field>
+  </record>
+
+  <record id="uposports_tarjeta_tree_view" model="ir.ui.view">
+    <field name="name">uposports.tarjeta.form</field>
+    <field name="model">uposports.pago</field>
+    <field name="inherit_id" ref="uposports.uposports_pago_tree_view" />
+    <field name="type">tree</field>
+    <field name="arch" type="xml">
+        <field name="cantidad" position="after">
+            <field name="entidadBancaria"/>
+        </field>
+    </field>
+  </record>
+
+  <record id="tarjeta_list_action" model="ir.actions.act_window">
+    <field name="name">Tarjeta</field>
+    <field name="res_model">uposports.tarjeta</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">Crea el primer pago con tarjeta</p>
+    </field>
+  </record>
+</odoo>

@@ -16,3 +16,5 @@ class Cliente(models.Model):
      abono_id=fields.Many2one('uposports.abono',string="Abono actual del cliente",required=True)
      reserva_id=fields.One2many('uposports.reserva',"cliente_id","Reservas del cliente")
      pago_id=fields.One2many("uposports.pago","cliente_id","Pagos del cliente")
+    	
+

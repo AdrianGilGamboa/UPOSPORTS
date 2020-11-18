@@ -7,3 +7,4 @@ from . import instalacion
 from . import material
 from . import pago
 from . import reserva
+from . import tarjeta

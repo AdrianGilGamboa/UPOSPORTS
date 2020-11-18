@@ -8,7 +8,7 @@ class Pago(models.Model):
      _description = 'uposports Pago'
      _rec_name = 'cliente_id'
 
-     fecha=fields.Datetime(string='Fecha y Hora',required=True, default = lambda self: datetime.today())
+     fecha=fields.Datetime(string='Fecha y Hora',required=True, default = lambda self: datetime.today(),readonly=1)
      cantidad=fields.Float(string='Cantidad(€)',required=True)
 
      cliente_id = fields.Many2one("uposports.cliente",string="Cliente",required=True)
