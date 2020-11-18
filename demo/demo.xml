@@ -1,30 +1,87 @@
 <odoo>
     <data>
+          <!--MATERIALES************************************************-->
+          <record id="material0" model="uposports.material">
+            <field name="name">Banda resistencia 5</field>
+            <field name="descripcion">Banda elástica de resistencia de 5 Kilogramos</field>
+            <field name="unidades">3</field>
+          </record>
 <!--
-          <record id="object0" model="uposports.uposports">
-            <field name="name">Object 0</field>
-            <field name="value">0</field>
+          <record id="material1" model="uposports.material">
+            <field name="name">Pelota fitball</field>
+            <field name="descripcion">Pelota de goma grande</field>
+            <field name="unidades">5</field>
+            <field name="instalacion_id">instalacion2</field>
           </record>
 
-          <record id="object1" model="uposports.uposports">
-            <field name="name">Object 1</field>
-            <field name="value">10</field>
+          <record id="material2" model="uposports.material">
+            <field name="name">Red de padel</field>
+            <field name="descripcion">Red para jugar al padel</field>
+            <field name="unidades">1</field>
+            <field name="instalacion_id">instalacion0</field>
           </record>
 
-          <record id="object2" model="uposports.uposports">
-            <field name="name">Object 2</field>
-            <field name="value">20</field>
+          <record id="material3" model="uposports.material">
+            <field name="name">Rueda Abdominal</field>
+            <field name="descripcion">Rueda para hacer abdominales</field>
+            <field name="unidades">2</field>
+            <field name="instalacion_id">instalacion2</field>
           </record>
 
-          <record id="object3" model="uposports.uposports">
-            <field name="name">Object 3</field>
-            <field name="value">30</field>
-          </record>
-
-          <record id="object4" model="uposports.uposports">
-            <field name="name">Object 4</field>
-            <field name="value">40</field>
+          <record id="material4" model="uposports.material">
+            <field name="name">Red de tenis</field>
+            <field name="descripcion">Red para jugar al tenis</field>
+            <field name="unidades">1</field>
+            <field name="instalacion_id">instalacion1</field>
           </record>
 -->
+          <!--EMPLEADOS************************************************-->
+          <record id="empleado0" model="uposports.empleado">
+            <field name="name">49129914M</field>
+            <field name="nombre">Javier</field>
+            <field name="apellidos">Gimenez Figueroa</field>
+            <field name="telefono">690096116</field>
+          </record> 
+
+          <record id="empleado1" model="uposports.empleado">
+            <field name="name">68426698Y</field>
+            <field name="nombre">Manuel</field>
+            <field name="apellidos">Molina Fuentes</field>
+            <field name="telefono">624272614</field>
+          </record>
+
+          <record id="empleado2" model="uposports.empleado">
+            <field name="name">21457889W</field>
+            <field name="nombre">Adrian</field>
+            <field name="apellidos">Gil Gamboa</field>
+            <field name="telefono">695255254</field>
+          </record>
+
+          <!-- BONOS***************************************************-->
+          <record id="abono0" model="uposports.abono">
+            <field name="name">Mensual</field>
+            <field name="precio">35</field>
+            <field name="duracion">1</field>
+            <field name="empleado_id" ref="empleado0"></field>
+          </record>
+
+          <!--INSTALACIONES*********************************************-->
+          <record id="instalacion0" model="uposports.instalacion">
+            <field name="name">Pista de Padel1</field>
+            <field name="capacidad">4</field>
+            <field name="descripcion">Pista para jugar al padel</field>
+          </record>
+
+          <record id="instalacion1" model="uposports.instalacion">
+            <field name="name">Pista de tenis</field>
+            <field name="capacidad">4</field>
+            <field name="descripcion">Pista para jugar al tenis</field>
+          </record>
+
+          <record id="instalacion2" model="uposports.instalacion">
+            <field name="name">Pabellón A</field>
+            <field name="capacidad">25</field>
+            <field name="descripcion">Pabellón para el desarrollo de la actividad física</field>
+          </record>
     </data>
 </odoo>
