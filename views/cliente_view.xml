@@ -45,7 +45,6 @@
                 <field name="telefono" />
                 <field name="codigoPostal" />
                 <field name="abono_id" widget="many2one"/>
-                <field name="reserva_id" widget="many2one"/>
             </tree>
         </field>
     </record>
