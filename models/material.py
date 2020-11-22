@@ -12,3 +12,12 @@ class Material(models.Model):
      unidades = fields.Integer(required=True)
 
      instalacion_id = fields.Many2one("uposports.instalacion",string="Instalacion")
+
+     @api.onchange('unidades')
+     def onchange_unidades(self):
+          resultadoUnidades = {}
+          if self.unidades < 0:
+               resultadoUnidades = {'value': {'unidades': 0},
+               'warning': {'title': 'Unidades de material incorrecta',
+                              'message': 'El número de unidades no puede ser negativo'}}
+          return resultadoUnidades

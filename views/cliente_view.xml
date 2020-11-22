@@ -26,7 +26,13 @@
                         </page>
                         <page name="abono" string="Abono">
                             <h2>Seleccione el abono para el cliente:</h2>
-                            <field name="abono_id" widget="many2one"/>
+                            <group>
+                                <field name="abono_id" widget="many2one"/>
+                            </group>
+                            <p>
+                                <br/>
+                                <i>Nota: Para añadir o editar, los campos sombreados en color son obligatorios</i>
+                            </p>
                         </page>
                     </notebook>
                 </sheet>
