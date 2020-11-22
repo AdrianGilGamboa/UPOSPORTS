@@ -76,7 +76,7 @@
             <field name="telefono">695255254</field>
           </record>
 
-          <!-- BONOS***************************************************-->
+          <!-- ABONOS***************************************************-->
           <record id="abono0" model="uposports.abono">
             <field name="name">Mensual</field>
             <field name="precio">35</field>
@@ -96,6 +96,79 @@
             <field name="empleado_id" ref="empleado0"></field>
           </record>
           
+<<<<<<< HEAD
+=======
+          <!--CLIENTES*********************************************-->
+          <record id="cliente0" model="uposports.cliente">
+            <field name="name">47859920Q</field>
+            <field name="nombre">Adrian</field>
+            <field name="apellidos">Gil</field>
+            <field name="telefono">674930025</field>
+            <field name="codigoPostal">41005</field>
+            <field name="abono_id" ref="abono0"></field>
+          </record>
+>>>>>>> 86788c7a9b3a449d95e72dff19eca61e7840e388
           
+          <record id="cliente1" model="uposports.cliente">
+            <field name="name">47346712P</field>
+            <field name="nombre">Daniel</field>
+            <field name="apellidos">Luque</field>
+            <field name="telefono">674458790</field>
+            <field name="codigoPostal">41020</field>
+            <field name="abono_id" ref="abono0"></field>
+          </record>
+
+          <record id="cliente2" model="uposports.cliente">
+            <field name="name">75345698D</field>
+            <field name="nombre">Manuel</field>
+            <field name="apellidos">Molina</field>
+            <field name="telefono">623854998</field>
+            <field name="codigoPostal">41010</field>
+            <field name="abono_id" ref="abono0"></field>
+          </record>
+
+          <!--RESERVAS*********************************************-->
+          <record id="reserva0" model="uposports.reserva">
+            <field name="name">1</field>
+            <field name="fechaHoraInicio">2020-09-02 18:25:20</field>
+            <field name="fechaHoraFin">2020-09-02 19:25:20</field>
+            <field name="instalacion_id" ref="instalacion0"></field>
+            <field name="cliente_id" ref="cliente0"></field>
+          </record>
+
+          <record id="reserva1" model="uposports.reserva">
+            <field name="name">2</field>
+            <field name="fechaHoraInicio">2020-09-02 18:25:20</field>
+            <field name="fechaHoraFin">2020-09-02 19:25:20</field>
+            <field name="instalacion_id" ref="instalacion1"></field>
+            <field name="cliente_id" ref="cliente1"></field>
+          </record>
+
+          <record id="reserva2" model="uposports.reserva">
+            <field name="name">3</field>
+            <field name="fechaHoraInicio">2020-09-02 18:25:20</field>
+            <field name="fechaHoraFin">2020-09-02 19:25:20</field>
+            <field name="instalacion_id" ref="instalacion2"></field>
+            <field name="cliente_id" ref="cliente2"></field>
+          </record>
+
+          <!--EFECTIVO*-->
+          <record id="efectivo0" model="uposports.efectivo">
+            <field name="fecha">2020-09-02 18:30:20</field>
+            <field name="cantidad">35.00</field>
+            <field name="importeAbonado">35.00</field>
+            <field name="importeDevuelto">0.00</field>
+            <field name="cliente_id" ref="cliente0"></field>
+            <field name="abono_id" ref="abono0"></field>
+          </record>
+
+          <!--TARJETA-->
+          <record id="tarjeta0" model="uposports.tarjeta">
+            <field name="fecha">2020-09-02 18:25:20</field>
+            <field name="cantidad">35.0</field>
+            <field name="entidadBancaria">BBVA</field>
+            <field name="cliente_id" ref="cliente2"></field>
+            <field name="abono_id" ref="abono0"></field>
+          </record>
     </data>
 </odoo>
