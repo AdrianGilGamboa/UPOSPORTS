@@ -32,6 +32,7 @@
         'views/instalacion_view.xml',
         'views/material_view.xml',
         'views/pago_view.xml',
+        'views/efectivo_view.xml',
         'views/tarjeta_view.xml',
         'views/menu.xml',
     ],
