@@ -96,8 +96,6 @@
             <field name="empleado_id" ref="empleado0"></field>
           </record>
           
-<<<<<<< HEAD
-=======
           <!--CLIENTES*********************************************-->
           <record id="cliente0" model="uposports.cliente">
             <field name="name">47859920Q</field>
@@ -107,7 +105,6 @@
             <field name="codigoPostal">41005</field>
             <field name="abono_id" ref="abono0"></field>
           </record>
->>>>>>> 86788c7a9b3a449d95e72dff19eca61e7840e388
           
           <record id="cliente1" model="uposports.cliente">
             <field name="name">47346712P</field>
@@ -162,7 +159,6 @@
             <field name="abono_id" ref="abono0"></field>
           </record>
 
-          <!--TARJETA-->
           <record id="tarjeta0" model="uposports.tarjeta">
             <field name="fecha">2020-09-02 18:25:20</field>
             <field name="cantidad">35.0</field>
