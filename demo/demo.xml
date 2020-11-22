@@ -148,5 +148,24 @@
             <field name="instalacion_id" ref="instalacion2"></field>
             <field name="cliente_id" ref="cliente2"></field>
           </record>
+
+          <!--EFECTIVO*-->
+          <record id="efectivo0" model="uposports.efectivo">
+            <field name="fecha">2020-09-02 18:30:20</field>
+            <field name="cantidad">35.00</field>
+            <field name="importeAbonado">35.00</field>
+            <field name="importeDevuelto">0.00</field>
+            <field name="cliente_id" ref="cliente0"></field>
+            <field name="abono_id" ref="abono0"></field>
+          </record>
+
+          <!--TARJETA-->
+          <record id="tarjeta0" model="uposports.tarjeta">
+            <field name="fecha">2020-09-02 18:25:20</field>
+            <field name="cantidad">35.0</field>
+            <field name="entidadBancaria">BBVA</field>
+            <field name="cliente_id" ref="cliente2"></field>
+            <field name="abono_id" ref="abono0"></field>
+          </record>
     </data>
 </odoo>
