@@ -83,6 +83,18 @@
             <field name="duracion">1</field>
             <field name="empleado_id" ref="empleado0"></field>
           </record>
+          <record id="abono1" model="uposports.abono">
+            <field name="name">Trimestral</field>
+            <field name="precio">90</field>
+            <field name="duracion">3</field>
+            <field name="empleado_id" ref="empleado1"></field>
+          </record>
+          <record id="abono2" model="uposports.abono">
+            <field name="name">Anual</field>
+            <field name="precio">300</field>
+            <field name="duracion">12</field>
+            <field name="empleado_id" ref="empleado0"></field>
+          </record>
           
           <!--CLIENTES*********************************************-->
           <record id="cliente0" model="uposports.cliente">
