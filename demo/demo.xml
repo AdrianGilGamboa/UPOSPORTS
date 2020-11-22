@@ -1,40 +1,59 @@
 <odoo>
     <data>
+    <!--INSTALACIONES*********************************************-->
+          <record id="instalacion0" model="uposports.instalacion">
+            <field name="name">Pista de Padel1</field>
+            <field name="capacidad">4</field>
+            <field name="descripcion">Pista para jugar al padel</field>
+          </record>
+
+          <record id="instalacion1" model="uposports.instalacion">
+            <field name="name">Pista de tenis</field>
+            <field name="capacidad">4</field>
+            <field name="descripcion">Pista para jugar al tenis</field>
+          </record>
+
+          <record id="instalacion2" model="uposports.instalacion">
+            <field name="name">Pabellón A</field>
+            <field name="capacidad">25</field>
+            <field name="descripcion">Pabellón para el desarrollo de la actividad física</field>
+          </record>
           <!--MATERIALES************************************************-->
           <record id="material0" model="uposports.material">
             <field name="name">Banda resistencia 5</field>
             <field name="descripcion">Banda elástica de resistencia de 5 Kilogramos</field>
             <field name="unidades">3</field>
+            <field name="instalacion_id" ref="instalacion2"></field>
           </record>
-<!--
+
           <record id="material1" model="uposports.material">
             <field name="name">Pelota fitball</field>
             <field name="descripcion">Pelota de goma grande</field>
             <field name="unidades">5</field>
-            <field name="instalacion_id">instalacion2</field>
+            <field name="instalacion_id" ref="instalacion2"></field>
           </record>
 
           <record id="material2" model="uposports.material">
             <field name="name">Red de padel</field>
             <field name="descripcion">Red para jugar al padel</field>
             <field name="unidades">1</field>
-            <field name="instalacion_id">instalacion0</field>
+            <field name="instalacion_id" ref="instalacion0"></field>
           </record>
 
           <record id="material3" model="uposports.material">
             <field name="name">Rueda Abdominal</field>
             <field name="descripcion">Rueda para hacer abdominales</field>
             <field name="unidades">2</field>
-            <field name="instalacion_id">instalacion2</field>
+            <field name="instalacion_id" ref="instalacion2"></field>
           </record>
 
           <record id="material4" model="uposports.material">
             <field name="name">Red de tenis</field>
             <field name="descripcion">Red para jugar al tenis</field>
             <field name="unidades">1</field>
-            <field name="instalacion_id">instalacion1</field>
+            <field name="instalacion_id" ref="instalacion1"></field>
           </record>
--->
+
           <!--EMPLEADOS************************************************-->
           <record id="empleado0" model="uposports.empleado">
             <field name="name">49129914M</field>
@@ -64,24 +83,6 @@
             <field name="duracion">1</field>
             <field name="empleado_id" ref="empleado0"></field>
           </record>
-
-          <!--INSTALACIONES*********************************************-->
-          <record id="instalacion0" model="uposports.instalacion">
-            <field name="name">Pista de Padel1</field>
-            <field name="capacidad">4</field>
-            <field name="descripcion">Pista para jugar al padel</field>
-          </record>
-
-          <record id="instalacion1" model="uposports.instalacion">
-            <field name="name">Pista de tenis</field>
-            <field name="capacidad">4</field>
-            <field name="descripcion">Pista para jugar al tenis</field>
-          </record>
-
-          <record id="instalacion2" model="uposports.instalacion">
-            <field name="name">Pabellón A</field>
-            <field name="capacidad">25</field>
-            <field name="descripcion">Pabellón para el desarrollo de la actividad física</field>
-          </record>
+          
     </data>
 </odoo>
