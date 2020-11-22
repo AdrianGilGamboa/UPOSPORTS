@@ -13,3 +13,12 @@ class Instalacion(models.Model):
 
      material_id = fields.One2many("uposports.material","instalacion_id","Material")
      reserva_id = fields.One2many("uposports.reserva","instalacion_id","Reserva")
+
+     @api.onchange('capacidad')
+     def onchange_capacidad(self):
+          resultadoCapacidad = {}
+          if self.capacidad < 0:
+               resultadoCapacidad = {'value': {'capacidad': 0},
+               'warning': {'title': 'Capacidad de la instalación incorrecta',
+                              'message': 'La capacidad de la instalación no puede ser menor a 1'}}
+          return resultadoCapacidad
