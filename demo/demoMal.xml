@@ -1,8 +1,0 @@
-<odoo>
-        <record id="empleado0" model="uposports.empleado">
-            <field name="name">49129914M</field>
-            <field name="nombre">Javier</field>
-            <field name="apellidos">Gimenez Figueroa</field>
-            <field name="telefono">690096116</field>
-        </record> 
-</odoo>

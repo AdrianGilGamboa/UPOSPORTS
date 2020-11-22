@@ -127,31 +127,31 @@
           <!--RESERVAS*********************************************-->
           <record id="reserva0" model="uposports.reserva">
             <field name="name">1</field>
-            <field name="fechaHoraInicio">2020-09-02 18:25:20</field>
-            <field name="fechaHoraFin">2020-09-02 19:25:20</field>
+            <field name="fechaHoraInicio">2020-11-26 18:30:00</field>
+            <field name="fechaHoraFin">2020-11-26 19:30:00</field>
             <field name="instalacion_id" ref="instalacion0"></field>
             <field name="cliente_id" ref="cliente0"></field>
           </record>
 
           <record id="reserva1" model="uposports.reserva">
             <field name="name">2</field>
-            <field name="fechaHoraInicio">2020-09-02 18:25:20</field>
-            <field name="fechaHoraFin">2020-09-02 19:25:20</field>
+            <field name="fechaHoraInicio">2020-11-26 15:30:00</field>
+            <field name="fechaHoraFin">2020-11-26 16:30:00</field>
             <field name="instalacion_id" ref="instalacion1"></field>
             <field name="cliente_id" ref="cliente1"></field>
           </record>
 
           <record id="reserva2" model="uposports.reserva">
             <field name="name">3</field>
-            <field name="fechaHoraInicio">2020-09-02 18:25:20</field>
-            <field name="fechaHoraFin">2020-09-02 19:25:20</field>
+            <field name="fechaHoraInicio">2020-11-25 20:00:00</field>
+            <field name="fechaHoraFin">2020-11-25 21:00:00</field>
             <field name="instalacion_id" ref="instalacion2"></field>
             <field name="cliente_id" ref="cliente2"></field>
           </record>
 
           <!--EFECTIVO*-->
           <record id="efectivo0" model="uposports.efectivo">
-            <field name="fecha">2020-09-02 18:30:20</field>
+            <field name="fecha">2020-11-02 18:30:20</field>
             <field name="cantidad">35.00</field>
             <field name="importeAbonado">35.00</field>
             <field name="importeDevuelto">0.00</field>
@@ -159,13 +159,30 @@
             <field name="abono_id" ref="abono0"></field>
           </record>
 
+          <record id="efectivo1" model="uposports.efectivo">
+            <field name="fecha">2020-11-02 20:30:23</field>
+            <field name="cantidad">90.00</field>
+            <field name="importeAbonado">100.00</field>
+            <field name="importeDevuelto">10.00</field>
+            <field name="cliente_id" ref="cliente1"></field>
+            <field name="abono_id" ref="abono1"></field>
+          </record>
+
           <!--TARJETA-->
           <record id="tarjeta0" model="uposports.tarjeta">
-            <field name="fecha">2020-09-02 18:25:20</field>
+            <field name="fecha">2020-01-02 18:25:20</field>
             <field name="cantidad">35.0</field>
             <field name="entidadBancaria">BBVA</field>
             <field name="cliente_id" ref="cliente2"></field>
-            <field name="abono_id" ref="abono0"></field>
+            <field name="abono_id" ref="abono1"></field>
+          </record>
+
+          <record id="tarjeta1" model="uposports.tarjeta">
+            <field name="fecha">2020-11-08 10:00:21</field>
+            <field name="cantidad">300.0</field>
+            <field name="entidadBancaria">Santander</field>
+            <field name="cliente_id" ref="cliente2"></field>
+            <field name="abono_id" ref="abono2"></field>
           </record>
     </data>
 </odoo>
