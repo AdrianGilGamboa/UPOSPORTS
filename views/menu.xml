@@ -12,8 +12,9 @@
   <menuitem name="Materiales" id="material_menu" parent="uposports_menu" groups="group_uposports_manager" action="material_list_action"/>
   <menuitem name="Empleados" id="empleado_menu" parent="uposports_menu" groups="group_uposports_manager" action="empleado_list_action"/>
   <menuitem name="Instalaciones" id="instalacion_menu" parent="uposports_menu" groups="group_uposports_manager" action="instalacion_list_action"/>
-  <menuitem name="Pago" id="pago_menu" parent="uposports_menu" groups="group_uposports_manager" action="pago_list_action"/>
+  <!--<menuitem name="Pago" id="pago_menu" parent="uposports_menu" groups="group_uposports_manager" action="pago_list_action"/>-->
   <menuitem name="Tarjeta" id="tarjeta_menu" parent="uposports_menu" groups="group_uposports_manager" action="tarjeta_list_action"/>
+  <menuitem name="Efectivo" id="efectivo_menu" parent="uposports_menu" groups="group_uposports_manager" action="efectivo_list_action"/>
 
 
 

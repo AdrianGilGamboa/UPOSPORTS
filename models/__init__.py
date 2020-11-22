@@ -8,3 +8,4 @@ from . import material
 from . import pago
 from . import reserva
 from . import tarjeta
+from . import efectivo

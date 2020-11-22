@@ -1,11 +1,11 @@
 <odoo>
-  <record id="uposports_tarjeta_form_view" model="ir.ui.view">
-    <field name="name">uposports.tarjeta.form</field>
-    <field name="model">uposports.tarjeta</field>
+  <record id="uposports_efectivo_form_view" model="ir.ui.view">
+    <field name="name">uposports.efectivo.form</field>
+    <field name="model">uposports.efectivo</field>
     <field name="arch" type="xml">
-      <form string="Tarjeta">
+      <form string="Efectivo">
         <sheet layout="auto">
-          <h2>Datos del tarjeta:</h2>
+          <h2>Datos del efectivo:</h2>
           <group>
             <group>
               <field name="cliente_id" widget="many2one"/>
@@ -14,7 +14,8 @@
             <group>
               <field name="fecha" />
               <field name="cantidad" />
-              <field name="entidadBancaria" />
+              <field name="importeAbonado" />
+              <field name="importeDevuelto" />
             </group>
           </group>
           <p>
@@ -26,26 +27,27 @@
     </field>
   </record>
 
-  <record id="uposports_tarjeta_tree_view" model="ir.ui.view">
-    <field name="name">uposports.tarjeta.tree</field>
-    <field name="model">uposports.tarjeta</field>
+  <record id="uposports_efectivo_tree_view" model="ir.ui.view">
+    <field name="name">uposports.efectivo.tree</field>
+    <field name="model">uposports.efectivo</field>
     <field name="arch" type="xml">
       <tree string="tree_string">
         <field name="cliente_id" widget="many2one"/>
         <field name="abono_id" widget="many2one"/>
         <field name="fecha" />
         <field name="cantidad" />
-        <field name="entidadBancaria" />
+        <field name="importeAbonado" />
+        <field name="importeDevuelto" />
       </tree>
     </field>
   </record>
 
-  <record id="tarjeta_list_action" model="ir.actions.act_window">
-    <field name="name">Tarjeta</field>
-    <field name="res_model">uposports.tarjeta</field>
+  <record id="efectivo_list_action" model="ir.actions.act_window">
+    <field name="name">Efectivo</field>
+    <field name="res_model">uposports.efectivo</field>
     <field name="view_mode">tree,form</field>
     <field name="help" type="html">
-      <p class="o_view_nocontent_smiling_face">Crea el primer pago en tarjeta</p>
+      <p class="o_view_nocontent_smiling_face">Crea el primer pago en efectivo</p>
     </field>
   </record>
 </odoo>

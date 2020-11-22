@@ -7,3 +7,4 @@ material_manager,material_manager,model_uposports_material,group_uposports_manag
 pago_manager,pago_manager,model_uposports_pago,group_uposports_manager,1,1,1,1
 reserva_manager,reserva_manager,model_uposports_reserva,group_uposports_manager,1,1,1,1
 tarjeta_manager,tarjeta_manager,model_uposports_tarjeta,group_uposports_manager,1,1,1,1
+efectivo_manager,efectivo_manager,model_uposports_efectivo,group_uposports_manager,1,1,1,1
