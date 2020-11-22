@@ -9,7 +9,7 @@ class Efectivo(models.Model):
 
 
     importeAbonado = fields.Float(string="Dinero entregado (€)",required=True)
-    importeDevuelto = fields.Float(string="Dinero a devolver (€)",readonly=1)
+    importeDevuelto = fields.Float(string="Cambio (€)",readonly=1)
 
       
 
