@@ -5,7 +5,7 @@ from odoo import models, fields, api
 
 class Abono(models.Model):
      _name = 'uposports.abono'
-     _description = 'uposports Abono'
+     _description = 'Modelo para los distintos tipos de abonos'
 
      precio = fields.Float(string="Precio (€)",required=True)
      name = fields.Char(string="Tipo", required=True, size=30,help="Nombre identificativo del abono")
@@ -16,6 +16,7 @@ class Abono(models.Model):
      cliente_id =  fields.One2many("uposports.cliente","abono_id","Cliente")
      pago_id=fields.One2many("uposports.pago","abono_id","Pagos del abono")
 
+#Se comprueba que el valor del campo precio no sea negativo, de lo contrario se informa del error y se establece a 0
      @api.onchange('precio')
      def onchange_precio(self):
           resultadoPrecio = {}
@@ -25,6 +26,7 @@ class Abono(models.Model):
                               'message': 'El precio del abono no puede ser negativo'}}
           return resultadoPrecio
 
+#Se comprueba que el valor del campo duracion sea mayor que 0, de lo contrario se informa del error y se establece a 1
      @api.onchange('duracion')
      def onchange_duracion(self):
           resultadoDuracion = {}

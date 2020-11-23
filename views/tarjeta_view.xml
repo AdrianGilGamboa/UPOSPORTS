@@ -45,7 +45,7 @@
     <field name="res_model">uposports.tarjeta</field>
     <field name="view_mode">tree,form</field>
     <field name="help" type="html">
-      <p class="o_view_nocontent_smiling_face">Crea el primer pago en tarjeta</p>
+      <p class="o_view_nocontent_smiling_face">Crea el primer pago con tarjeta</p>
     </field>
   </record>
 </odoo>

@@ -37,9 +37,6 @@
         </field>
     </record>
 
-
-
-
     <record id="abono_list_action" model="ir.actions.act_window">
         <field name="name">Abono</field>
         <field name="res_model">uposports.abono</field>

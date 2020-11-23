@@ -5,7 +5,7 @@ from odoo import models, fields, api
 
 class Cliente(models.Model):
      _name = 'uposports.cliente'
-     _description = 'uposports Cliente'
+     _description = 'Modelo para los clientes'
 
      name = fields.Char(string="DNI", required=True, size=9, help="Documento identificativo")
      nombre = fields.Char(string="Nombre", required=True, size=30, help="Nombre del cliente")

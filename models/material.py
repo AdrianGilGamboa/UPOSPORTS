@@ -13,6 +13,7 @@ class Material(models.Model):
 
      instalacion_id = fields.Many2one("uposports.instalacion",string="Instalacion")
 
+#Se comprueba que las unidades sean mayor que 0, de lo contrario se informa del error y se establece a 0.
      @api.onchange('unidades')
      def onchange_unidades(self):
           resultadoUnidades = {}
