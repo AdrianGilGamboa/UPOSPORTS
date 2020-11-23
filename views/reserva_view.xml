@@ -1,3 +1,10 @@
+<!--
+    La vista de reservas es la más importante y es por ello que es la que se nos muestra al entrar en la app.
+    En concreto, se muestra la vista calendario por semanas (se puede modificar), para una mayor comodidad.
+    En dicha vista calendario, se crearán las reservas, seleccionando y arrastrando hasta la hora que se deseé.
+    Es por ello, que se ha deshabilitado la creación de reservas en la vista tree, ya que será una vista solo lectura para filtrar y realizar búsquedas de filtrado y agrupaciones.
+-->
+
 <odoo>
     <record id="uposports_reserva_form_view" model="ir.ui.view">
         <field name="name">uposports.reserva.form</field>
@@ -25,7 +32,7 @@
         <field name="name">uposports.reserva.tree</field>
         <field name="model">uposports.reserva</field>
         <field name="arch" type="xml">
-            <tree string="tree_string">
+            <tree string="tree_string" create="false">
                 <field name="fechaHoraInicio" />
                 <field name="fechaHoraFin" />
                 <field name="instalacion_id" widget="many2one"/>
@@ -41,7 +48,7 @@
         <field name="model">uposports.reserva</field>
         <field name="type">calendar</field>
         <field name="arch" type="xml">
-            <calendar string="Vista Calendario" color="instalacion_id" date_start="fechaHoraInicio" date_stop="fechaHoraFin" mode="week">
+            <calendar string="Vista Calendario" quick_add="False" color="instalacion_id" date_start="fechaHoraInicio" date_stop="fechaHoraFin" mode="week">
                 <field name="cliente_id"/>
                 <field name="instalacion_id"/>
 
@@ -49,7 +56,7 @@
         </field>
     </record>
 
-    <!-- Search view -->
+    <!-- Búsquedas Personalizadas -->
 
     <record id="reserva_view_search" model="ir.ui.view">
         <field name="name">uposports.reserva.search</field>
@@ -70,9 +77,8 @@
     <record id="reserva_list_action" model="ir.actions.act_window">
         <field name="name">Reserva</field>
         <field name="res_model">uposports.reserva</field>
-        <field name="view_mode">tree,form,calendar</field>
+        <field name="view_mode">calendar,form,tree</field>
         <field name="search_view_id" ref="reserva_view_search"/>
-
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">Crea la primera reserva</p>
         </field>

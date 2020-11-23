@@ -44,7 +44,7 @@
         </field>
     </record>
 
-    <!-- Search view -->
+    <!-- Búsqueda Personalizada -->
 
     <record id="instalacion_view_search" model="ir.ui.view">
         <field name="name">uposports.instalacion.search</field>

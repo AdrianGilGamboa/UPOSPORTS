@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "uposports",
+    'name': "UpoSports",
 
     'summary': """
         Complejo Deportivo UpoSports""",
