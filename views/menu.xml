@@ -1,9 +1,9 @@
 <odoo>
     <!-- Top menu item -->
-  <menuitem name="UpoSports" id="main_uposports_menu" groups="group_uposports_manager"/>
+  <menuitem name="UPOSports" id="main_uposports_menu" groups="group_uposports_manager"/>
 
   <!-- menu categories -->
-  <menuitem name="UpoSports" id="uposports_menu" groups="group_uposports_manager" parent="main_uposports_menu"/>
+  <menuitem name="UPOSports" id="uposports_menu" groups="group_uposports_manager" parent="main_uposports_menu"/>
 
   <!-- actions -->
   <menuitem name="Reservas" id="reserva_menu" parent="uposports_menu" groups="group_uposports_manager" action="reserva_list_action"/>
@@ -19,7 +19,7 @@
 
 
   <!-- menu categories -->
-  <menuitem name="Gestionar UpoSports" id="uposports_menu" groups="group_uposports_manager" parent="main_uposports_menu"/>
+  <menuitem name="Gestionar UPOSports" id="uposports_menu" groups="group_uposports_manager" parent="main_uposports_menu"/>
 
 
 </odoo>
