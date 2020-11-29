@@ -17,4 +17,5 @@ class Cliente(models.Model):
      reserva_id=fields.One2many('uposports.reserva',"cliente_id","Reservas del cliente")
      pago_id=fields.One2many("uposports.pago","cliente_id","Pagos del cliente")
     	
+     _sql_constraints = [('cliente_name_unique', 'UNIQUE (name)', 'Compruebe el DNI, debe ser único.')]
 
