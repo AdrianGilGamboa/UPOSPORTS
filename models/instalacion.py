@@ -14,6 +14,9 @@ class Instalacion(models.Model):
      material_id = fields.One2many("uposports.material","instalacion_id","Material")
      reserva_id = fields.One2many("uposports.reserva","instalacion_id","Reserva")
 
+     _sql_constraints = [('instalacion_name_unique', 'UNIQUE (name)', 'Compruebe el nombre de la instalación, debe ser único.')]
+
+
 #Se comprueba que la capacidad sea mayor que 0, de lo contrario, se informa del error y se establece a 0.
      @api.onchange('capacidad')
      def onchange_capacidad(self):

@@ -14,3 +14,4 @@ class Empleado(models.Model):
 
      abono_id = fields.One2many("uposports.abono","empleado_id","Abonos creado por el empleado")
 
+     _sql_constraints = [('empleado_name_unique', 'UNIQUE (name)', 'Compruebe el DNI, debe ser único.')]

@@ -9,12 +9,27 @@ class Reserva(models.Model):
      _description = 'Modelo para las reservas de instalaciones'
      _rec_name = 'instalacion_id'
 
-     name = fields.Integer(string="ID Reserva")
      fechaHoraInicio = fields.Datetime(string='Fecha/Hora Inicio', required=True, autodate = True, store=True, default = lambda self: datetime.datetime.today())
      fechaHoraFin = fields.Datetime(string='Fecha/Hora Fin', required=True, autodate = True, store=True, default = lambda self: datetime.datetime.today())
-
+     state = fields.Selection([('completado','Completado'),
+                                     ('pendiente','Pendiente'),
+                                     ('cancelado','Cancelado'),],
+                                     'Estado', default='pendiente')
      instalacion_id = fields.Many2one("uposports.instalacion",string="Instalacion",required=True )
      cliente_id = fields.Many2one("uposports.cliente",string="Cliente",required=True)
+
+
+     def btn_submit_to_cancelado(self):
+          if self.state=='pendiente':
+               self.write({'state':'cancelado'})
+
+     def btn_submit_to_completado(self):
+          if self.state=='pendiente':
+               self.write({'state':'completado'})
+
+
+
+
 
 #Se comprueba que la fecha de inicio no sea inferior a la fecha actual, de lo contrario se informa del error y se establece la fecha actual.
 #Además, la fecha de fin se establece 1 hora más tarde.
