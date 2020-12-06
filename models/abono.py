@@ -16,6 +16,9 @@ class Abono(models.Model):
      cliente_id =  fields.One2many("uposports.cliente","abono_id","Cliente")
      pago_id=fields.One2many("uposports.pago","abono_id","Pagos del abono")
 
+
+
+
 #Se comprueba que el valor del campo precio no sea negativo, de lo contrario se informa del error y se establece a 0
      @api.onchange('precio')
      def onchange_precio(self):

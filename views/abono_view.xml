@@ -13,11 +13,12 @@
                             <field name="precio" />
                         </group>
                         <group>
-                           <field name="empleado_id" widget="many2one"/>
+                            <field name="empleado_id" widget="many2one"/>
                         </group>
                     </group>
                     <p>
-                        <br/><i>Nota: Para añadir o editar, los campos sombreados en color son obligatorios</i>
+                        <br/>
+                        <i>Nota: Para añadir o editar, los campos sombreados en color son obligatorios</i>
                     </p>
                 </sheet>
             </form>

@@ -11,7 +11,7 @@ class Efectivo(models.Model):
 
 
     importeAbonado = fields.Float(string="Dinero entregado (€)",required=True)
-    importeDevuelto = fields.Float(string="Cambio (€)*",readonly=1)
+    importeDevuelto = fields.Float(string="Cambio (€)*")
 
 #Se comprueba que el importe abonado sea mayor o igual que el importe a pagar y se calcula el cambio.
     @api.onchange('importeAbonado')
