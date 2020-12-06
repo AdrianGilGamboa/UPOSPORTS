@@ -13,7 +13,6 @@
             <form string="Reserva">
                 <header>
                     <button name="btn_submit_to_cancelado" string="Cancelar Reserva" type="object" class="oe_highlight" style="background-color: #B22222;"/>
-                   <!--<button name="btn_submit_to_pendiente" string="Pendiente" type="object" class="oe_highlight" style="background-color:white;border:none;color:black;"/>--> 
                     <button name="btn_submit_to_completado" string="Completar Reserva" type="object" class="oe_highlight" style="background-color: green;"/>
                 </header>
                 <sheet layout="auto">
