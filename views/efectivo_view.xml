@@ -35,7 +35,7 @@
     <field name="name">uposports.efectivo.tree</field>
     <field name="model">uposports.efectivo</field>
     <field name="arch" type="xml">
-      <tree string="tree_string">
+      <tree string="tree_string" create="false">
         <field name="cliente_id" widget="many2one"/>
         <field name="abono_id" widget="many2one"/>
         <field name="fecha" />

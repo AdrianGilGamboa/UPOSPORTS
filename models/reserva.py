@@ -33,7 +33,10 @@ class Reserva(models.Model):
                raise models.ValidationError('La reserva no puede ser completada porque ya ha sido cancelada.')
 
 
-
+#Validamos antes de guardar los datos comprobamos:
+# 1. Fecha de inicio no puede ser inferior a la fecha y hora actual.
+# 2. Fecha de inicio no puede ser superior o igual a la fecha y hora de fin.
+# 3. La duracion maxima de la reserva es de 3 horas.
      @api.constrains('fechaHoraInicio')
      def _check_fechaHoraInicio(self):
           if self.fechaHoraInicio < datetime.datetime.today():
@@ -53,33 +56,3 @@ class Reserva(models.Model):
                'warning': {'title': 'Fecha fin incorrecta',
                           'message': 'La fecha de fin no puede ser anterior o igual a la fecha de inicio'}}
           return resultadoFechaFin
-
-"""     @api.onchange('fechaHoraFin')
-     def onchange_fechaHoraFinMaxHoras(self):
-          resultadoFechaFin2 = {}
-          if self.fechaHoraFin > self.fechaHoraInicio+datetime.timedelta(hours=3):
-               resultadoFechaFin2 = {'value': {'fechaHoraFin': self.fechaHoraInicio+datetime.timedelta(hours=1)},
-               'warning': {'title': 'Maximo de horas superado',
-                          'message': 'Las reservas no pueden superar las 3 horas de duración'}}
-          return resultadoFechaFin2"""
-
-
-"""    @api.constrains('fechaHoraFin')
-     def _check_fechaHoraFin(self):
-          if self.fechaHoraInicio >= self.fechaHoraFin:
-               raise models.ValidationError('La fecha de fin no puede ser anterior o igual a la fecha de inicio.')
-
-
-
-#Se comprueba que la fecha de inicio no sea inferior a la fecha actual, de lo contrario se informa del error y se establece la fecha actual."""
-#Además, la fecha de fin se establece 1 hora más tarde.
-"""     @api.onchange('fechaHoraInicio')
-     def onchange_fechaHoraInicio(self):
-          resultadoFechaIni = {}
-          ahora = datetime.datetime.today()
-          if self.fechaHoraInicio < ahora:
-               resultadoFechaIni = {'value': {'fechaHoraInicio': ahora, 'fechaHoraFin':ahora+datetime.timedelta(hours=1)},
-               'warning': {'title': 'Fecha inicio incorrecta',
-                          'message': 'La fecha de inicio no puede ser anterior a la fecha y hora actual'}}
-          return resultadoFechaIni"""
-          

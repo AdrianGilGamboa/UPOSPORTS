@@ -30,7 +30,7 @@
     <field name="name">uposports.tarjeta.tree</field>
     <field name="model">uposports.tarjeta</field>
     <field name="arch" type="xml">
-      <tree string="tree_string">
+      <tree string="tree_string" create="false">
         <field name="cliente_id" widget="many2one"/>
         <field name="abono_id" widget="many2one"/>
         <field name="fecha" />
