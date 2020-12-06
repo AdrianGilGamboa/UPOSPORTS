@@ -126,24 +126,24 @@
 
     <!--RESERVAS*********************************************-->
     <record id="reserva0" model="uposports.reserva">
-      <field name="fechaHoraInicio">2020-11-26 18:30:00</field>
-      <field name="fechaHoraFin">2020-11-26 19:30:00</field>
+      <field name="fechaHoraInicio">2021-02-26 18:30:00</field>
+      <field name="fechaHoraFin">2021-02-26 19:30:00</field>
       <field name="state">completado</field>
       <field name="instalacion_id" ref="instalacion0"></field>
       <field name="cliente_id" ref="cliente0"></field>
     </record>
 
     <record id="reserva1" model="uposports.reserva">
-      <field name="fechaHoraInicio">2020-11-26 15:30:00</field>
-      <field name="fechaHoraFin">2020-11-26 16:30:00</field>
+      <field name="fechaHoraInicio">2021-02-26 15:30:00</field>
+      <field name="fechaHoraFin">2021-02-26 16:30:00</field>
       <field name="state">completado</field>
       <field name="instalacion_id" ref="instalacion1"></field>
       <field name="cliente_id" ref="cliente1"></field>
     </record>
 
     <record id="reserva2" model="uposports.reserva">
-      <field name="fechaHoraInicio">2020-11-25 20:00:00</field>
-      <field name="fechaHoraFin">2020-11-25 21:00:00</field>
+      <field name="fechaHoraInicio">2021-02-25 20:00:00</field>
+      <field name="fechaHoraFin">2021-02-25 21:00:00</field>
       <field name="state">completado</field>
       <field name="instalacion_id" ref="instalacion2"></field>
       <field name="cliente_id" ref="cliente2"></field>
