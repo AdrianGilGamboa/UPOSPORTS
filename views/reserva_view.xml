@@ -12,7 +12,7 @@
         <field name="arch" type="xml">
             <form string="Reserva">
                 <header>
-                    <button name="btn_submit_to_cancelado" string="Cancelar Reserva" type="object" class="oe_highlight" style="background-color: red;"/>
+                    <button name="btn_submit_to_cancelado" string="Cancelar Reserva" type="object" class="oe_highlight" style="background-color: #B22222;"/>
                    <!--<button name="btn_submit_to_pendiente" string="Pendiente" type="object" class="oe_highlight" style="background-color:white;border:none;color:black;"/>--> 
                     <button name="btn_submit_to_completado" string="Completar Reserva" type="object" class="oe_highlight" style="background-color: green;"/>
                 </header>
@@ -29,6 +29,10 @@
                             <field name="state" widget="statusbar" />
                         </group>
                     </group>
+                    <p style="color:#B22222">
+                        <br/>
+                        <i>La duración de las reservas no puede superar las 3 horas</i>
+                    </p>
                     <p>
                         <br/>
                         <i>Nota: Para añadir o editar, los campos sombreados en color son obligatorios</i>

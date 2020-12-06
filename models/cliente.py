@@ -19,3 +19,21 @@ class Cliente(models.Model):
     	
      _sql_constraints = [('cliente_name_unique', 'UNIQUE (name)', 'Compruebe el DNI, debe ser único.')]
 
+
+     def btn_pago_tarjeta(self):
+          return {
+                    "type": "ir.actions.act_window",
+                    "res_model": "uposports.tarjeta",
+                    "views": [[False, "form"]],
+                    "target": "new",
+                    }    
+
+     def btn_pago_efectivo(self):
+          return {
+                    "type": "ir.actions.act_window",
+                    "res_model": "uposports.efectivo",
+                    "views": [[False, "form"]],
+                    "target": "new",
+                    "context":{
+                              "cliente_id":self.name,                           }
+                    }

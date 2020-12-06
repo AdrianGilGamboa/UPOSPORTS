@@ -25,9 +25,14 @@
                             </p>
                         </page>
                         <page name="abono" string="Abono">
-                            <h2>Seleccione el abono para el cliente:</h2>
                             <group>
-                                <field name="abono_id" widget="many2one"/>
+                                    <h2>Seleccione el abono para el cliente:</h2>
+                                    <field name="abono_id" widget="many2one"/>
+                                <br/>
+                                <br/>
+                                    <h2>Seleccione forma de pago:</h2><br/>
+                                    <button name="btn_pago_tarjeta" string="Pago Tarjeta" type="object" class="oe_highlight" style=""/>
+                                    <button name="btn_pago_efectivo" string="Pago Efectivo" type="object" class="oe_highlight" style=""/>
                             </group>
                             <p>
                                 <br/>
@@ -66,6 +71,7 @@
             <p class="o_view_nocontent_smiling_face">Crea el primer cliente</p>
         </field>
     </record>
+
 
 
 </odoo>
