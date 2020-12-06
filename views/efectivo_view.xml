@@ -13,11 +13,15 @@
             </group>
             <group>
               <field name="fecha" />
-              <field name="cantidad" />
+              <field name="cantidad" readonly="1" force_save="1"/>
               <field name="importeAbonado" />
-              <field name="importeDevuelto" />
+              <field name="importeDevuelto" readonly="1" force_save="1"/>
             </group>
           </group>
+          <p>
+            <br/>
+            <i>*Para actualizar el cambio hay que hacer click fuera del campo "Dinero Entregado" </i>
+          </p>  
           <p>
             <br/>
             <i>Nota: Para añadir o editar, los campos sombreados en color son obligatorios</i>

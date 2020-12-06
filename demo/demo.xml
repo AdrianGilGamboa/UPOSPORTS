@@ -1,170 +1,188 @@
 <odoo>
-    <data>
+  <data>
     <!--INSTALACIONES*********************************************-->
-          <record id="instalacion0" model="uposports.instalacion">
-            <field name="name">Pista de Padel1</field>
-            <field name="capacidad">4</field>
-            <field name="descripcion">Pista para jugar al padel</field>
-          </record>
+    <record id="instalacion0" model="uposports.instalacion">
+      <field name="name">Pista de Padel1</field>
+      <field name="capacidad">4</field>
+      <field name="descripcion">Pista para jugar al padel</field>
+    </record>
 
-          <record id="instalacion1" model="uposports.instalacion">
-            <field name="name">Pista de tenis</field>
-            <field name="capacidad">4</field>
-            <field name="descripcion">Pista para jugar al tenis</field>
-          </record>
+    <record id="instalacion1" model="uposports.instalacion">
+      <field name="name">Pista de tenis</field>
+      <field name="capacidad">4</field>
+      <field name="descripcion">Pista para jugar al tenis</field>
+    </record>
 
-          <record id="instalacion2" model="uposports.instalacion">
-            <field name="name">Pabellón A</field>
-            <field name="capacidad">25</field>
-            <field name="descripcion">Pabellón para el desarrollo de la actividad física</field>
-          </record>
-          <!--MATERIALES************************************************-->
-          <record id="material0" model="uposports.material">
-            <field name="name">Banda resistencia 5</field>
-            <field name="descripcion">Banda elástica de resistencia de 5 Kilogramos</field>
-            <field name="unidades">3</field>
-            <field name="instalacion_id" ref="instalacion2"></field>
-          </record>
+    <record id="instalacion2" model="uposports.instalacion">
+      <field name="name">Pabellón A</field>
+      <field name="capacidad">25</field>
+      <field name="descripcion">Pabellón para el desarrollo de la actividad física</field>
+    </record>
+    <!--MATERIALES************************************************-->
+    <record id="material0" model="uposports.material">
+      <field name="name">Banda resistencia 5</field>
+      <field name="descripcion">Banda elástica de resistencia de 5 Kilogramos</field>
+      <field name="unidades">3</field>
+      <field name="instalacion_id" ref="instalacion2"></field>
+    </record>
 
-          <record id="material1" model="uposports.material">
-            <field name="name">Pelota fitball</field>
-            <field name="descripcion">Pelota de goma grande</field>
-            <field name="unidades">5</field>
-            <field name="instalacion_id" ref="instalacion2"></field>
-          </record>
+    <record id="material1" model="uposports.material">
+      <field name="name">Pelota fitball</field>
+      <field name="descripcion">Pelota de goma grande</field>
+      <field name="unidades">5</field>
+      <field name="instalacion_id" ref="instalacion2"></field>
+    </record>
 
-          <record id="material2" model="uposports.material">
-            <field name="name">Red de padel</field>
-            <field name="descripcion">Red para jugar al padel</field>
-            <field name="unidades">1</field>
-            <field name="instalacion_id" ref="instalacion0"></field>
-          </record>
+    <record id="material2" model="uposports.material">
+      <field name="name">Red de padel</field>
+      <field name="descripcion">Red para jugar al padel</field>
+      <field name="unidades">1</field>
+      <field name="instalacion_id" ref="instalacion0"></field>
+    </record>
 
-          <record id="material3" model="uposports.material">
-            <field name="name">Rueda Abdominal</field>
-            <field name="descripcion">Rueda para hacer abdominales</field>
-            <field name="unidades">2</field>
-            <field name="instalacion_id" ref="instalacion2"></field>
-          </record>
+    <record id="material3" model="uposports.material">
+      <field name="name">Rueda Abdominal</field>
+      <field name="descripcion">Rueda para hacer abdominales</field>
+      <field name="unidades">2</field>
+      <field name="instalacion_id" ref="instalacion2"></field>
+    </record>
 
-          <record id="material4" model="uposports.material">
-            <field name="name">Red de tenis</field>
-            <field name="descripcion">Red para jugar al tenis</field>
-            <field name="unidades">1</field>
-            <field name="instalacion_id" ref="instalacion1"></field>
-          </record>
+    <record id="material4" model="uposports.material">
+      <field name="name">Red de tenis</field>
+      <field name="descripcion">Red para jugar al tenis</field>
+      <field name="unidades">1</field>
+      <field name="instalacion_id" ref="instalacion1"></field>
+    </record>
 
-          <!--EMPLEADOS************************************************-->
-          <record id="empleado0" model="uposports.empleado">
-            <field name="name">49129914M</field>
-            <field name="nombre">Javier</field>
-            <field name="apellidos">Gimenez Figueroa</field>
-            <field name="telefono">690096116</field>
-          </record> 
+    <!--EMPLEADOS************************************************-->
+    <record id="empleado0" model="uposports.empleado">
+      <field name="name">49129914M</field>
+      <field name="nombre">Javier</field>
+      <field name="apellidos">Gimenez Figueroa</field>
+      <field name="telefono">690096116</field>
+    </record>
 
-          <record id="empleado1" model="uposports.empleado">
-            <field name="name">68426698Y</field>
-            <field name="nombre">Manuel</field>
-            <field name="apellidos">Molina Fuentes</field>
-            <field name="telefono">624272614</field>
-          </record>
+    <record id="empleado1" model="uposports.empleado">
+      <field name="name">68426698Y</field>
+      <field name="nombre">Manuel</field>
+      <field name="apellidos">Molina Fuentes</field>
+      <field name="telefono">624272614</field>
+    </record>
 
-          <record id="empleado2" model="uposports.empleado">
-            <field name="name">21457889W</field>
-            <field name="nombre">Adrian</field>
-            <field name="apellidos">Gil Gamboa</field>
-            <field name="telefono">695255254</field>
-          </record>
+    <record id="empleado2" model="uposports.empleado">
+      <field name="name">21457889W</field>
+      <field name="nombre">Adrian</field>
+      <field name="apellidos">Gil Gamboa</field>
+      <field name="telefono">695255254</field>
+    </record>
 
-          <!-- ABONOS***************************************************-->
-          <record id="abono0" model="uposports.abono">
-            <field name="name">Mensual</field>
-            <field name="precio">35</field>
-            <field name="duracion">1</field>
-            <field name="empleado_id" ref="empleado0"></field>
-          </record>
-          <record id="abono1" model="uposports.abono">
-            <field name="name">Trimestral</field>
-            <field name="precio">90</field>
-            <field name="duracion">3</field>
-            <field name="empleado_id" ref="empleado1"></field>
-          </record>
-          <record id="abono2" model="uposports.abono">
-            <field name="name">Anual</field>
-            <field name="precio">300</field>
-            <field name="duracion">12</field>
-            <field name="empleado_id" ref="empleado0"></field>
-          </record>
-          
-          <!--CLIENTES*********************************************-->
-          <record id="cliente0" model="uposports.cliente">
-            <field name="name">47859920Q</field>
-            <field name="nombre">Adrian</field>
-            <field name="apellidos">Gil</field>
-            <field name="telefono">674930025</field>
-            <field name="codigoPostal">41005</field>
-            <field name="abono_id" ref="abono0"></field>
-          </record>
-          
-          <record id="cliente1" model="uposports.cliente">
-            <field name="name">47346712P</field>
-            <field name="nombre">Daniel</field>
-            <field name="apellidos">Luque</field>
-            <field name="telefono">674458790</field>
-            <field name="codigoPostal">41020</field>
-            <field name="abono_id" ref="abono0"></field>
-          </record>
+    <!-- ABONOS***************************************************-->
+    <record id="abono0" model="uposports.abono">
+      <field name="name">Mensual</field>
+      <field name="precio">35</field>
+      <field name="duracion">1</field>
+      <field name="empleado_id" ref="empleado0"></field>
+    </record>
+    <record id="abono1" model="uposports.abono">
+      <field name="name">Trimestral</field>
+      <field name="precio">90</field>
+      <field name="duracion">3</field>
+      <field name="empleado_id" ref="empleado1"></field>
+    </record>
+    <record id="abono2" model="uposports.abono">
+      <field name="name">Anual</field>
+      <field name="precio">300</field>
+      <field name="duracion">12</field>
+      <field name="empleado_id" ref="empleado0"></field>
+    </record>
 
-          <record id="cliente2" model="uposports.cliente">
-            <field name="name">75345698D</field>
-            <field name="nombre">Manuel</field>
-            <field name="apellidos">Molina</field>
-            <field name="telefono">623854998</field>
-            <field name="codigoPostal">41010</field>
-            <field name="abono_id" ref="abono0"></field>
-          </record>
+    <!--CLIENTES*********************************************-->
+    <record id="cliente0" model="uposports.cliente">
+      <field name="name">47859920Q</field>
+      <field name="nombre">Adrian</field>
+      <field name="apellidos">Gil</field>
+      <field name="telefono">674930025</field>
+      <field name="codigoPostal">41005</field>
+      <field name="abono_id" ref="abono0"></field>
+    </record>
 
-          <!--RESERVAS*********************************************-->
-          <record id="reserva0" model="uposports.reserva">
-            <field name="name">1</field>
-            <field name="fechaHoraInicio">2020-09-02 18:25:20</field>
-            <field name="fechaHoraFin">2020-09-02 19:25:20</field>
-            <field name="instalacion_id" ref="instalacion0"></field>
-            <field name="cliente_id" ref="cliente0"></field>
-          </record>
+    <record id="cliente1" model="uposports.cliente">
+      <field name="name">47346712P</field>
+      <field name="nombre">Daniel</field>
+      <field name="apellidos">Luque</field>
+      <field name="telefono">674458790</field>
+      <field name="codigoPostal">41020</field>
+      <field name="abono_id" ref="abono0"></field>
+    </record>
 
-          <record id="reserva1" model="uposports.reserva">
-            <field name="name">2</field>
-            <field name="fechaHoraInicio">2020-09-02 18:25:20</field>
-            <field name="fechaHoraFin">2020-09-02 19:25:20</field>
-            <field name="instalacion_id" ref="instalacion1"></field>
-            <field name="cliente_id" ref="cliente1"></field>
-          </record>
+    <record id="cliente2" model="uposports.cliente">
+      <field name="name">75345698D</field>
+      <field name="nombre">Manuel</field>
+      <field name="apellidos">Molina</field>
+      <field name="telefono">623854998</field>
+      <field name="codigoPostal">41010</field>
+      <field name="abono_id" ref="abono0"></field>
+    </record>
 
-          <record id="reserva2" model="uposports.reserva">
-            <field name="name">3</field>
-            <field name="fechaHoraInicio">2020-09-02 18:25:20</field>
-            <field name="fechaHoraFin">2020-09-02 19:25:20</field>
-            <field name="instalacion_id" ref="instalacion2"></field>
-            <field name="cliente_id" ref="cliente2"></field>
-          </record>
+    <!--RESERVAS*********************************************-->
+    <record id="reserva0" model="uposports.reserva">
+      <field name="fechaHoraInicio">2020-11-26 18:30:00</field>
+      <field name="fechaHoraFin">2020-11-26 19:30:00</field>
+      <field name="state">completado</field>
+      <field name="instalacion_id" ref="instalacion0"></field>
+      <field name="cliente_id" ref="cliente0"></field>
+    </record>
 
-          <!--EFECTIVO*-->
-          <record id="efectivo0" model="uposports.efectivo">
-            <field name="fecha">2020-09-02 18:30:20</field>
-            <field name="cantidad">35.00</field>
-            <field name="importeAbonado">35.00</field>
-            <field name="importeDevuelto">0.00</field>
-            <field name="cliente_id" ref="cliente0"></field>
-            <field name="abono_id" ref="abono0"></field>
-          </record>
+    <record id="reserva1" model="uposports.reserva">
+      <field name="fechaHoraInicio">2020-11-26 15:30:00</field>
+      <field name="fechaHoraFin">2020-11-26 16:30:00</field>
+      <field name="state">completado</field>
+      <field name="instalacion_id" ref="instalacion1"></field>
+      <field name="cliente_id" ref="cliente1"></field>
+    </record>
 
-          <record id="tarjeta0" model="uposports.tarjeta">
-            <field name="fecha">2020-09-02 18:25:20</field>
-            <field name="cantidad">35.0</field>
-            <field name="entidadBancaria">BBVA</field>
-            <field name="cliente_id" ref="cliente2"></field>
-            <field name="abono_id" ref="abono0"></field>
-          </record>
-    </data>
+    <record id="reserva2" model="uposports.reserva">
+      <field name="fechaHoraInicio">2020-11-25 20:00:00</field>
+      <field name="fechaHoraFin">2020-11-25 21:00:00</field>
+      <field name="state">completado</field>
+      <field name="instalacion_id" ref="instalacion2"></field>
+      <field name="cliente_id" ref="cliente2"></field>
+    </record>
+
+    <!--EFECTIVO*-->
+    <record id="efectivo0" model="uposports.efectivo">
+      <field name="fecha">2020-11-02 18:30:20</field>
+      <field name="cantidad">35.00</field>
+      <field name="importeAbonado">35.00</field>
+      <field name="importeDevuelto">0.00</field>
+      <field name="cliente_id" ref="cliente0"></field>
+      <field name="abono_id" ref="abono0"></field>
+    </record>
+
+    <record id="efectivo1" model="uposports.efectivo">
+      <field name="fecha">2020-11-02 20:30:23</field>
+      <field name="cantidad">90.00</field>
+      <field name="importeAbonado">100.00</field>
+      <field name="importeDevuelto">10.00</field>
+      <field name="cliente_id" ref="cliente1"></field>
+      <field name="abono_id" ref="abono1"></field>
+    </record>
+
+    <!--TARJETA-->
+    <record id="tarjeta0" model="uposports.tarjeta">
+      <field name="fecha">2020-01-02 18:25:20</field>
+      <field name="cantidad">35.0</field>
+      <field name="entidadBancaria">BBVA</field>
+      <field name="cliente_id" ref="cliente2"></field>
+      <field name="abono_id" ref="abono1"></field>
+    </record>
+
+    <record id="tarjeta1" model="uposports.tarjeta">
+      <field name="fecha">2020-11-08 10:00:21</field>
+      <field name="cantidad">300.0</field>
+      <field name="entidadBancaria">Santander</field>
+      <field name="cliente_id" ref="cliente2"></field>
+      <field name="abono_id" ref="abono2"></field>
+    </record>
+  </data>
 </odoo>

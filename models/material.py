@@ -13,6 +13,10 @@ class Material(models.Model):
 
      instalacion_id = fields.Many2one("uposports.instalacion",string="Instalacion")
 
+     _sql_constraints = [('material_name_unique', 'UNIQUE (name)', 'Compruebe el nombre del material, debe ser único.')]
+
+
+#Se comprueba que las unidades sean mayor que 0, de lo contrario se informa del error y se establece a 0.
      @api.onchange('unidades')
      def onchange_unidades(self):
           resultadoUnidades = {}
