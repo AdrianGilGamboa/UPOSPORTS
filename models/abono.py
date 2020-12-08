@@ -10,13 +10,17 @@ class Abono(models.Model):
      precio = fields.Float(string="Precio (€)",required=True)
      name = fields.Char(string="Tipo", required=True, size=30,help="Nombre identificativo del abono")
      duracion = fields.Integer(string="Duracion (meses)", required=True, help="Duración en meses del abono",default=1)
-    
+     NumAbonosPorTipo = fields.Integer(compute='_numAbonosPorTipo',string='Número de Abonos',store=True)
+
 
      empleado_id = fields.Many2one("uposports.empleado",string="Creado por el empleado(DNI)", required=True)
      cliente_id =  fields.One2many("uposports.cliente","abono_id","Cliente")
      pago_id=fields.One2many("uposports.pago","abono_id","Pagos del abono")
 
-
+     @api.depends('cliente_id')
+     def _numAbonosPorTipo(self): 
+          for record in self:                            
+               record.NumAbonosPorTipo = len(record.cliente_id) 
 
 
 #Se comprueba que el valor del campo precio no sea negativo, de lo contrario se informa del error y se establece a 0
