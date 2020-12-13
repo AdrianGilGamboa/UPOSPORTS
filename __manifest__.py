@@ -28,7 +28,6 @@
         'reports/reports.xml',
         'reports/tarjeta_report.xml', 
         'reports/efectivo_report.xml',
-        'views/materiales_view.xml',
         'views/reserva_view.xml',
         'views/abono_view.xml',
         'views/cliente_view.xml',
