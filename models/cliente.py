@@ -27,8 +27,6 @@ class Cliente(models.Model):
                     "res_model": "uposports.tarjeta",
                     "views": [[False, "form"]],
                     "target": "new",
-                    "context":{
-                              "default_entidadBancaria":self.name                           }
                     }    
 
      def btn_pago_efectivo(self):
@@ -37,8 +35,6 @@ class Cliente(models.Model):
                     "res_model": "uposports.efectivo",
                     "views": [[False, "form"]],
                     "target": "new",
-                    "context":{
-                              "default_cliente_id":self.name                           }
                     }
 
      @api.constrains('telefono','codigoPostal','name')
