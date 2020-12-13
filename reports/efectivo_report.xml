@@ -1,9 +1,79 @@
 <odoo>
     <template id="efectivo_report_graph">
         <t t-call="web.html_container">
-            <t t-foreach="docs" t-as="doc">
+            <t t-call="web.external_layout">
                 <div class="page">
-                    <t t-esc="doc.fecha" />
+                    <div class="oe_structure" />
+                    <div class="row" style="margin-top: 40px; font-weight: bold; font-size: 19px;">
+                <span style="font-weight: bold; ">Pagos en Efectivo seleccionados:</span>
+   
+                    </div>
+                    <div id="pagos_efectivo" class="row" style="margin-top: 10px;">
+                        <table class="table">
+                            <thead style="text-align:center;">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Fecha y Hora</th>
+                                    <th>Tipo de Abono</th>
+                                    <th>Precio del Abono (€)</th>
+                                    <th>DNI del Cliente</th>
+                                    <th>Dinero Entregado (€)</th>
+                                    <th>Cambio (€)</th>
+                                </tr>
+                            </thead>
+                            <tbody style="text-align:center;">
+                                <t t-foreach="docs" t-as="efectivo">
+                                    <tr>
+                                        <td>
+                                            <p t-field="efectivo.id" />
+                                        </td>
+                                        <td>
+                                            <p t-field="efectivo.fecha" />
+                                        </td>
+                                        <td>
+                                            <p t-field="efectivo.abono_id" />
+                                        </td>
+                                        <td>
+                                            <p t-field="efectivo.cantidad" />
+                                        </td>
+                                        <td>
+                                            <p t-field="efectivo.cliente_id" />
+                                        </td>
+                                        <td>
+                                            <p t-field="efectivo.importeAbonado" />
+                                        </td>
+                                        <td>
+                                            <p t-field="efectivo.importeDevuelto" />
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+        <template id="efectivo_report_text">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <div class="oe_structure" />
+                    <div class="row" style="margin-top: 40px; font-weight: bold; font-size: 19px;">
+                    <span style="font-weight: bold; ">Pagos en Efectivo seleccionados:</span>
+   
+                    </div>
+                    <t t-foreach="docs" t-as="efectivo">
+                        <div style="margin-top: 20px;" class="row">
+                        <p>Nº de Operación: <span t-field="efectivo.id" style="font-weight: bold;"/> </p>
+                        </div>
+                        <div id="pagos_efectivo_text" class="row" style=" margin-bottom:20px">
+                                                El cliente con DNI <span t-field="efectivo.cliente_id" style="font-weight: bold;"/> ha realizado un pago de <span t-field="efectivo.cantidad" style="font-weight: bold;"/> €, entregando 
+                                                la cantidad de <span t-field="efectivo.importeAbonado" style="font-weight: bold;"/> € <span t-if="efectivo.importeDevuelto&gt;0"> y obteniendo un cambio de <span t-field="efectivo.importeDevuelto" style="font-weight: bold;"/> €</span>
+                                                el <span t-field="efectivo.fecha" style="font-weight: bold;"/> para la obtención del tipo de Abono <span t-field="efectivo.abono_id" style="font-weight: bold;"/>.
+                        </div>
+                        <hr/>
+                    </t>
                 </div>
             </t>
         </t>

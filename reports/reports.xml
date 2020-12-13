@@ -3,8 +3,8 @@
     <report id="tarjeta_report_graph" string="Informe de Pagos con Tarjeta (Gráfico)" model="uposports.tarjeta" report_type="qweb-pdf" name="uposports.tarjeta_report_graph" />
     <report id="tarjeta_report_text" string="Informe de Pagos con Tarjeta (Redactado)" model="uposports.tarjeta" report_type="qweb-pdf" name="uposports.tarjeta_report_text" />
 
- <!--   <report id="efectivo_report_graph" string="Informe de Pagos en Efectivo (Gráfico)" model="uposports.efectivo" report_type="qweb-pdf" name="uposports.efectivo_report_graph" />
-    <report id="efectivo_report_text" string="Informe de Pagos en Efectivo (Redactado)" model="uposports.efectivo" report_type="qweb-pdf" name="uposports.efectivo_report_text" />-->
+    <report id="efectivo_report_graph" string="Informe de Pagos en Efectivo (Gráfico)" model="uposports.efectivo" report_type="qweb-pdf" name="uposports.efectivo_report_graph" />
+    <report id="efectivo_report_text" string="Informe de Pagos en Efectivo (Redactado)" model="uposports.efectivo" report_type="qweb-pdf" name="uposports.efectivo_report_text" />
 
 </odoo>
 
