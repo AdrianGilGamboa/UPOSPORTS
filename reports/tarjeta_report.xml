@@ -15,7 +15,7 @@
                                     <th>ID</th>
                                     <th>Fecha y Hora</th>
                                     <th>Tipo de Abono</th>
-                                    <th>Precio del Abono</th>
+                                    <th>Precio del Abono (€)</th>
                                     <th>DNI del Cliente</th>
                                     <th>Entidad Bancaria</th>
                                 </tr>
@@ -33,7 +33,7 @@
                                             <p t-field="tarjeta.abono_id" />
                                         </td>
                                         <td>
-                                            <p t-field="tarjeta.cantidad" /> €
+                                            <p t-field="tarjeta.cantidad" />
                                         </td>
                                         <td>
                                             <p t-field="tarjeta.cliente_id" />
