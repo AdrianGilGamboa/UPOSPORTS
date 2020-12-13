@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report id="tarjeta_report" string="Report" model="uposports.tarjeta" report_type="qweb-pdf" name="gym.tarjeta_report" />
+
+    <report id="efectivo_report" string="User report" model="uposports.efectivo" report_type="qweb-pdf" name="gym.efectivo_report" />
+
+</odoo>
+
+    

@@ -2,7 +2,6 @@
 
 from odoo import models, fields, api
 
-
 class Cliente(models.Model):
      _name = 'uposports.cliente'
      _description = 'Modelo para los clientes'
@@ -28,8 +27,6 @@ class Cliente(models.Model):
                     "res_model": "uposports.tarjeta",
                     "views": [[False, "form"]],
                     "target": "new",
-                    "context":{
-                              "default_entidadBancaria":self.name                           }
                     }    
 
      def btn_pago_efectivo(self):
@@ -38,6 +35,28 @@ class Cliente(models.Model):
                     "res_model": "uposports.efectivo",
                     "views": [[False, "form"]],
                     "target": "new",
-                    "context":{
-                              "default_cliente_id":self.name                           }
                     }
+
+     @api.constrains('telefono','codigoPostal','name')
+     def _check_cliente(self):
+          error=""
+          hayerror=False
+          letras='TRWAGMYFPDXBNJZSQVHLCKE'
+          numeroDni=self.name[0:8]
+          if len(str(self.telefono)) < 9:
+               error=error + "El telefono debe tener 9 digitos\n"
+               hayerror=True
+          if str(self.telefono)[0:1]!='6' and str(self.telefono)[0:1]!='7':
+               error=error + "El telefono debe empezar por 6 o 7\n"
+               hayerror=True
+          if len(str(self.codigoPostal)) < 5 or len(str(self.codigoPostal)) > 5:
+               error=error + "El CP debe de tener 5 dígitos\n"
+               hayerror=True
+          if (self.codigoPostal)<1000 or (self.codigoPostal)>52999:
+               error=error + "El CP es incorrecto\n"
+               hayerror=True
+          if(self.name[-1]!=letras[int(numeroDni)%23]):
+               error=error + "El DNI es incorrecto\n"
+               hayerror=True
+          if(hayerror==True):
+               raise models.ValidationError(error)
