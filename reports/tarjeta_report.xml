@@ -5,7 +5,7 @@
                 <div class="page">
                     <div class="oe_structure" />
                     <div class="row" style="margin-top: 40px; font-weight: bold; font-size: 19px;">
-                <span style="font-weight: bold; ">Pagos con Tarjeta seleccionados:</span>
+                <span style="font-weight: bold; ">Pago(s) con Tarjeta seleccionado(s):</span>
    
                     </div>
                     <div id="pagos_tarjeta" class="row" style="margin-top: 10px;">
@@ -64,11 +64,9 @@
                         <p>Nº de Operación: <span t-field="tarjeta.id" style="font-weight: bold;"/> </p>
                         </div>
                         <div id="pagos_tarjeta_text" class="row" style=" margin-bottom:20px">
-            
                                                 El cliente con DNI <span t-field="tarjeta.cliente_id" style="font-weight: bold;"/> ha realizado un pago de <span t-field="tarjeta.cantidad" style="font-weight: bold;"/> €
-                                                el <span t-field="tarjeta.fecha" style="font-weight: bold;"/> mediante la entidad bancaria <span t-field="tarjeta.entidadBancaria" style="font-weight: bold;"/> para la obtención del tipo de Abono
-                                                <span t-field="tarjeta.abono_id" style="font-weight: bold;"/>.
-
+                                                el <span t-field="tarjeta.fecha" t-options='{"format": "dd/MM/y"}' style="font-weight: bold;"/> a las <span t-field="tarjeta.fecha" t-options='{"format": "HH:mm"}' style="font-weight: bold;"/> h
+                                                mediante la entidad bancaria <span t-field="tarjeta.entidadBancaria" style="font-weight: bold;"/> para la obtención del tipo de Abono  <span t-field="tarjeta.abono_id" style="font-weight: bold;"/>.
                         </div>
                         <hr/>
                     </t>

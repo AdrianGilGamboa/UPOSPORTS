@@ -28,3 +28,9 @@ class Efectivo(models.Model):
     		'warning': {'title': 'Importe abonado incorrecto',
     					'message': 'El importe abonado debe ser mayor o igual al precio del abono'}}
     	return resultado
+
+    def btn_report_efectivo_graph(self):
+        return self.env.ref('uposports.efectivo_report_graph').report_action(self)
+
+    def btn_report_efectivo_text(self):
+        return self.env.ref('uposports.efectivo_report_text').report_action(self)

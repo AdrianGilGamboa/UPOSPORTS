@@ -13,7 +13,7 @@ class Abono(models.Model):
      NumAbonosPorTipo = fields.Integer(compute='_numAbonosPorTipo',string='Número de Abonos',store=True)
 
 
-     empleado_id = fields.Many2one("uposports.empleado",string="Creado por el empleado(DNI)", required=True)
+     empleado_id = fields.Many2one("uposports.empleado",string="Creado por el empleado (DNI)", required=True)
      cliente_id =  fields.One2many("uposports.cliente","abono_id","Cliente")
      pago_id=fields.One2many("uposports.pago","abono_id","Pagos del abono")
 

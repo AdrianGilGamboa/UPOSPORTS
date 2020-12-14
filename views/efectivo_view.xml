@@ -4,6 +4,10 @@
     <field name="model">uposports.efectivo</field>
     <field name="arch" type="xml">
       <form string="Efectivo">
+        <header>
+          <button name="btn_report_efectivo_graph" string="Generar Informe (Gráfico)" type="object" class="oe_highlight" />
+          <button name="btn_report_efectivo_text" string="Generar Informe (Redactado)" type="object" class="oe_highlight" />
+        </header>
         <sheet layout="auto">
           <h2>Datos del pago en efectivo:</h2>
           <group>
@@ -21,7 +25,7 @@
           <p>
             <br/>
             <i>*Para actualizar el cambio hay que hacer click fuera del campo "Dinero Entregado" </i>
-          </p>  
+          </p>
           <p>
             <br/>
             <i>Nota: Para añadir o editar, los campos sombreados en color son obligatorios</i>
