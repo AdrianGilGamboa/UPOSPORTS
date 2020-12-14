@@ -4,6 +4,10 @@
     <field name="model">uposports.tarjeta</field>
     <field name="arch" type="xml">
       <form string="Tarjeta">
+        <header>
+          <button name="btn_report_tarjeta_graph" string="Generar Informe (Gráfico)" type="object" class="oe_highlight" />
+          <button name="btn_report_tarjeta_text" string="Generar Informe (Redactado)" type="object" class="oe_highlight" />
+        </header>
         <sheet layout="auto">
           <h2>Datos del pago con tarjeta:</h2>
           <group>

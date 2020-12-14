@@ -12,3 +12,9 @@ class Tarjeta(models.Model):
      entidadBancaria=fields.Char(string="Entidad Bancaria",size=30,required=True)
 
 
+     def btn_report_tarjeta_graph(self):
+          return self.env.ref('uposports.tarjeta_report_graph').report_action(self)
+
+     def btn_report_tarjeta_text(self):
+          return self.env.ref('uposports.tarjeta_report_text').report_action(self)
+     
