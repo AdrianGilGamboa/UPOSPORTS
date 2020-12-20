@@ -20,7 +20,7 @@ class Cliente(models.Model):
      _sql_constraints = [('cliente_name_unique', 'UNIQUE (name)', 'Compruebe el DNI, debe ser único.')]
                  
                     
-
+#Botón interactivo que nos abre el formulario de pago tarjeta
      def btn_pago_tarjeta(self):
           return {
                     "type": "ir.actions.act_window",
@@ -29,6 +29,7 @@ class Cliente(models.Model):
                     "target": "new",
                     }    
 
+#Botón interactivo que nos abre el formulario de pago efectivo
      def btn_pago_efectivo(self):
           return {
                     "type": "ir.actions.act_window",
@@ -37,6 +38,7 @@ class Cliente(models.Model):
                     "target": "new",
                     }
 
+#Validamos los campos de telefono, codigo postal y DNI. Si alguno es erroneo se muestra el mensaje correspondiente al querer guardar.
      @api.constrains('telefono','codigoPostal','name')
      def _check_cliente(self):
           error=""

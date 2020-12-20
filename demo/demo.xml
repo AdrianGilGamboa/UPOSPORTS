@@ -57,21 +57,21 @@
 
     <!--EMPLEADOS************************************************-->
     <record id="empleado0" model="uposports.empleado">
-      <field name="name">49129914M</field>
+      <field name="name">97289280Q</field>
       <field name="nombre">Javier</field>
       <field name="apellidos">Gimenez Figueroa</field>
       <field name="telefono">690096116</field>
     </record>
 
     <record id="empleado1" model="uposports.empleado">
-      <field name="name">68426698Y</field>
+      <field name="name">66336727N</field>
       <field name="nombre">Manuel</field>
       <field name="apellidos">Molina Fuentes</field>
       <field name="telefono">624272614</field>
     </record>
 
     <record id="empleado2" model="uposports.empleado">
-      <field name="name">21457889W</field>
+      <field name="name">33216447P</field>
       <field name="nombre">Adrian</field>
       <field name="apellidos">Gil Gamboa</field>
       <field name="telefono">695255254</field>
