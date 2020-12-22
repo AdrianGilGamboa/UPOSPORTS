@@ -52,6 +52,23 @@
         </field>
     </record>
 
+    <!--Búsqueda Personalizada-->
+
+    <record id="abono_view_search" model="ir.ui.view">
+        <field name="name">uposports.abono.search</field>
+        <field name="model">uposports.abono</field>
+        <field name="arch" type="xml">
+            <search string="Search">
+                <filter name="duration" string="Abono para 6 meses o más" domain="[('duracion','&gt;=', '6')]"/>
+                <filter name="price" string="Abono &gt; 60€" domain="[('precio','&gt;', '60')]"/>
+                <group expand="0" string="Agrupar por...">
+                    <filter name="group_by_empleado" string="Agrupar por empleado" context="{'group_by': 'empleado_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+
     <record id="abono_list_action" model="ir.actions.act_window">
         <field name="name">Abono</field>
         <field name="res_model">uposports.abono</field>

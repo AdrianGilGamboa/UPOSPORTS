@@ -13,8 +13,8 @@
             <field name="instalacion_id" widget="many2one"/>
           </group>
           <p>
-          <br/>
-          <i>Nota: Para añadir o editar, los campos sombreados en color son obligatorios</i>
+            <br/>
+            <i>Nota: Para añadir o editar, los campos sombreados en color son obligatorios</i>
           </p>
         </sheet>
       </form>
@@ -34,20 +34,20 @@
     </field>
   </record>
 
-    <!-- Búsqueda Personalizada-->
+  <!-- Búsqueda Personalizada-->
 
-      <record id="material_view_search" model="ir.ui.view">
-        <field name="name">uposports.material.search</field>
-        <field name="model">uposports.material</field>
-        <field name="arch" type="xml">
-            <search string="Search">
-                <filter name="search_quantity" string="Unidades&lt;10" domain="[('unidades','&lt;','10')]" />
-                <group expand="0" string="Agrupar por...">
-                    <filter name="group_by_instalacion" string="Agrupar por instalaciones" context="{'group_by': 'instalacion_id'}" />
-                </group>
-            </search>
-        </field>
-    </record>
+  <record id="material_view_search" model="ir.ui.view">
+    <field name="name">uposports.material.search</field>
+    <field name="model">uposports.material</field>
+    <field name="arch" type="xml">
+      <search string="Search">
+        <filter name="search_quantity" string="Unidades&lt;10" domain="[('unidades','&lt;','10')]" />
+        <group expand="0" string="Agrupar por...">
+          <filter name="group_by_instalacion" string="Agrupar por instalaciones" context="{'group_by': 'instalacion_id'}" />
+        </group>
+      </search>
+    </field>
+  </record>
 
   <record id="material_list_action" model="ir.actions.act_window">
     <field name="name">Material</field>
