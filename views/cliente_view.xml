@@ -61,11 +61,27 @@
         </field>
     </record>
 
+        <!-- Búsqueda Personalizada-->
+
+      <record id="cliente_view_search" model="ir.ui.view">
+        <field name="name">uposports.cliente.search</field>
+        <field name="model">uposports.cliente</field>
+        <field name="arch" type="xml">
+            <search string="Search">
+                <filter name="search_postal" string="CP &lt; 41015" domain="[('codigoPostal','&lt;','41015')]" />
+                <group expand="0" string="Agrupar por...">
+                    <filter name="group_by_abono" string="Agrupar por abonos" context="{'group_by': 'abono_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
 
     <record id="cliente_list_action" model="ir.actions.act_window">
         <field name="name">Cliente</field>
         <field name="res_model">uposports.cliente</field>
         <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="cliente_view_search"/>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">Crea el primer cliente</p>
         </field>
